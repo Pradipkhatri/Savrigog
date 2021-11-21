@@ -1,0 +1,245 @@
+fileFormatVersion: 2
+guid: cdfe3d0ebc005554fba2a8a7337753ad
+timeCreated: 1589547525
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: BigDoor
+    100002: Cube.004
+    100004: Cube.006
+    100006: Cube.007
+    100008: //RootNode
+    100010: Cube.008
+    100012: Cube.002
+    100014: Cube.015
+    100016: Cube.016
+    100018: Cube.018
+    100020: Cube.019
+    100022: Cube.022
+    100024: Cube.024
+    100026: Cube.025
+    100028: Cube.026
+    100030: Cube.027
+    100032: Cube.028
+    100034: Armature
+    100036: DoorRootBone
+    100038: LeftBoneArmature
+    100040: LeftBoneArmature_end
+    100042: RightDoor_Armature
+    100044: RightDoor_Armature_end
+    100046: BigDoor.001
+    100048: BigDoor.002
+    100050: LeftDoorController
+    100052: RightDoorController
+    400000: BigDoor
+    400002: Cube.004
+    400004: Cube.006
+    400006: Cube.007
+    400008: //RootNode
+    400010: Cube.008
+    400012: Cube.002
+    400014: Cube.015
+    400016: Cube.016
+    400018: Cube.018
+    400020: Cube.019
+    400022: Cube.022
+    400024: Cube.024
+    400026: Cube.025
+    400028: Cube.026
+    400030: Cube.027
+    400032: Cube.028
+    400034: Armature
+    400036: DoorRootBone
+    400038: LeftBoneArmature
+    400040: LeftBoneArmature_end
+    400042: RightDoor_Armature
+    400044: RightDoor_Armature_end
+    400046: BigDoor.001
+    400048: BigDoor.002
+    400050: LeftDoorController
+    400052: RightDoorController
+    2300000: BigDoor
+    2300002: Cube.004
+    2300004: Cube.006
+    2300006: Cube.007
+    2300008: //RootNode
+    2300010: Cube.008
+    2300012: Cube.002
+    2300014: Cube.015
+    2300016: Cube.016
+    2300018: Cube.018
+    2300020: Cube.019
+    2300022: Cube.022
+    2300024: Cube.024
+    2300026: Cube.025
+    2300028: Cube.026
+    2300030: Cube.027
+    2300032: Cube.028
+    2300034: BigDoor.001
+    2300036: BigDoor.002
+    3300000: BigDoor
+    3300002: Cube.004
+    3300004: Cube.006
+    3300006: Cube.007
+    3300008: //RootNode
+    3300010: Cube.008
+    3300012: Cube.002
+    3300014: Cube.015
+    3300016: Cube.016
+    3300018: Cube.018
+    3300020: Cube.019
+    3300022: Cube.022
+    3300024: Cube.024
+    3300026: Cube.025
+    3300028: Cube.026
+    3300030: Cube.027
+    3300032: Cube.028
+    3300034: BigDoor.001
+    3300036: BigDoor.002
+    4300000: Cube.002
+    4300002: BigDoor
+    4300004: Cube.004
+    4300006: Cube.006
+    4300008: Cube.007
+    4300010: Cube.008
+    4300012: Cube.024
+    4300014: BigDoor.001
+    4300016: BigDoor.002
+    7400000: LeftDoor
+    7400002: BigDoor|Cube.006Action
+    7400004: BigDoor|SceneAction
+    7400006: BigDoor|SceneAction.001
+    7400008: Cube.006|BigDoorAction
+    7400010: RightDoor
+    7400012: Cube.006|SceneAction
+    7400014: Cube.006|SceneAction.001
+    7400016: BigDoor|MainDoorOpen
+    7400018: RightDoor
+    11100000: //RootNode
+    13700000: BigDoor
+    13700002: Cube.008
+    13700004: BigDoor.001
+    13700006: BigDoor.002
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: LeftDoor
+      takeName: BigDoor.002|BigDoor.001Action
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BigDoor
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    - serializedVersion: 16
+      name: RightDoor
+      takeName: BigDoor.002|BigDoor.002Action
+      firstFrame: 0
+      lastFrame: 100
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: BigDoor
+        weight: 1
+      - path: Cube.006
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

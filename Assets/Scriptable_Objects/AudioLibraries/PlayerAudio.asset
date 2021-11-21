@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b65863ffd96c464fa3e8b8e460ad2e0, type: 3}
+  m_Name: PlayerAudio
+  m_EditorClassIdentifier: 
+  audioContainer:
+    audio_Array:
+    - code: GrabLedge
+      audioClip:
+      - {fileID: 8300000, guid: 44216af51df66d5448c56bbdcddabdf3, type: 3}
+    - code: NoStamina
+      audioClip:
+      - {fileID: 8300000, guid: c1d210414364a5d4992a508190585a93, type: 3}
+    - code: Jump
+      audioClip:
+      - {fileID: 8300000, guid: afe52977ccc7f7c4fb4b19cda3481c5b, type: 3}
+    - code: GroundSmash
+      audioClip:
+      - {fileID: 8300000, guid: 67cfc5971a5282d48bede56a7e12a1cd, type: 3}
+    - code: BodyDrop
+      audioClip:
+      - {fileID: 8300000, guid: 7dc97a1b2b36ec4408e6bee4cfaadac3, type: 3}
+    - code: WeaponChange
+      audioClip:
+      - {fileID: 8300000, guid: b3a93b9a4b441644db7137e716cb6c84, type: 3}
+    - code: Die
+      audioClip:
+      - {fileID: 8300000, guid: ecb91623c7cba4747962e5530a7393e9, type: 3}
+      - {fileID: 8300000, guid: 1ad0bb75b52799149aaef062473bafc3, type: 3}
+      - {fileID: 8300000, guid: ad074db2ee9f16f4eada2c92c738b87c, type: 3}
+      - {fileID: 8300000, guid: 7e547f5f61499994f982ad7114e31e96, type: 3}
+      - {fileID: 8300000, guid: 4a2a1452cbb2dbe44b45c62a73aa22c1, type: 3}
+    - code: ItemPick
+      audioClip:
+      - {fileID: 8300000, guid: 06901542e5939104bb6c132817d263ce, type: 3}
+    - code: ItemRange
+      audioClip:
+      - {fileID: 8300000, guid: 081611e49b83cdd419e35773c08d4220, type: 3}

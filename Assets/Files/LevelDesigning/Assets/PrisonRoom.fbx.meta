@@ -1,0 +1,169 @@
+fileFormatVersion: 2
+guid: f28e6966d1014c54382e0d3ac47600c3
+timeCreated: 1589516904
+licenseType: Pro
+ModelImporter:
+  serializedVersion: 18
+  fileIDToRecycleName:
+    100000: Cube.002
+    100002: Cube.003
+    100004: Cube.004
+    100006: Cube.005
+    100008: Cube.006
+    100010: Cylinder
+    100012: Cylinder.001
+    100014: PrisonFloor
+    100016: PrisonMetalBar
+    100018: PrisonMetalLayout
+    100020: PrisonRods
+    100022: PrisonRoof
+    100024: //RootNode
+    100026: Door
+    100028: DoorRotater
+    100030: Gate
+    100032: Lock
+    100034: Locker
+    100036: LockGrab
+    100038: LockHolder
+    100040: PrisonRoom
+    400000: Cube.002
+    400002: Cube.003
+    400004: Cube.004
+    400006: Cube.005
+    400008: Cube.006
+    400010: Cylinder
+    400012: Cylinder.001
+    400014: PrisonFloor
+    400016: PrisonMetalBar
+    400018: PrisonMetalLayout
+    400020: PrisonRods
+    400022: PrisonRoof
+    400024: //RootNode
+    400026: Door
+    400028: DoorRotater
+    400030: Gate
+    400032: Lock
+    400034: Locker
+    400036: LockGrab
+    400038: LockHolder
+    400040: PrisonRoom
+    2300000: Cube.002
+    2300002: Cube.003
+    2300004: Cube.004
+    2300006: Cube.005
+    2300008: Cube.006
+    2300010: Cylinder
+    2300012: Cylinder.001
+    2300014: PrisonFloor
+    2300016: PrisonMetalBar
+    2300018: PrisonMetalLayout
+    2300020: PrisonRods
+    2300022: PrisonRoof
+    2300024: //RootNode
+    2300026: Door
+    2300028: DoorRotater
+    2300030: Gate
+    2300032: Lock
+    2300034: Locker
+    2300036: LockGrab
+    2300038: LockHolder
+    2300040: PrisonRoom
+    3300000: Cube.002
+    3300002: Cube.003
+    3300004: Cube.004
+    3300006: Cube.005
+    3300008: Cube.006
+    3300010: Cylinder
+    3300012: Cylinder.001
+    3300014: PrisonFloor
+    3300016: PrisonMetalBar
+    3300018: PrisonMetalLayout
+    3300020: PrisonRods
+    3300022: PrisonRoof
+    3300024: //RootNode
+    3300026: Door
+    3300028: DoorRotater
+    3300030: Gate
+    3300032: Lock
+    3300034: Locker
+    3300036: LockGrab
+    3300038: LockHolder
+    3300040: PrisonRoom
+    4300000: PrisonRoom
+    4300002: PrisonMetalLayout
+    4300004: PrisonMetalBar
+    4300006: PrisonRods
+    4300008: Cube.002
+    4300010: Cylinder.001
+    4300012: Cube.003
+    4300014: Cylinder
+    4300016: Cube.004
+    4300018: Cube.006
+    4300020: Cube.005
+    4300022: PrisonFloor
+    4300024: PrisonRoof
+    4300026: Gate
+    4300028: DoorRotater
+    4300030: Locker
+    4300032: Door
+    4300034: Lock
+    4300036: LockGrab
+    4300038: LockHolder
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

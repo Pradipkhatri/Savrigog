@@ -1,0 +1,114 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aabb733b70d1d4448441c0f7c2b152d, type: 3}
+  m_Name: Main_AudioLibrary
+  m_EditorClassIdentifier: 
+  group_audioContainer:
+    audioGroups:
+    - code: FootSteps
+      audio_Array:
+      - code: Concrete
+        audioClip:
+        - {fileID: 8300000, guid: b4e97d39b244c1043965654e7872fa8c, type: 3}
+        - {fileID: 8300000, guid: a96be772d2aca0b4a95dafdf3087a315, type: 3}
+        - {fileID: 8300000, guid: 5ec94a39863518341be6a095f465623c, type: 3}
+        - {fileID: 8300000, guid: 458ace5eb4afe2149a973a94b758a87c, type: 3}
+        - {fileID: 8300000, guid: be2e426ead8a4f5489fc8d42f70ad308, type: 3}
+        - {fileID: 8300000, guid: bf10a1ac6381ebe46b014401997b43d8, type: 3}
+        - {fileID: 8300000, guid: 4adc6ec3c4c61c1468ee45d19f162c7f, type: 3}
+        - {fileID: 8300000, guid: 40bc6c0e72b04e748aad835a6aaf8384, type: 3}
+        - {fileID: 8300000, guid: 605b53b4527af4245bc7d79f151ffaeb, type: 3}
+        - {fileID: 8300000, guid: 3967f498fbee1a046ad6ceadb0bd0868, type: 3}
+      - code: Wood
+        audioClip:
+        - {fileID: 8300000, guid: 454a63f6feb7c244ea666737cb09b8fd, type: 3}
+        - {fileID: 8300000, guid: 718111a7d86e9e94fb5e1ff6123d07e0, type: 3}
+        - {fileID: 8300000, guid: 8f1b2f5d251a9404390daf645b6bddc8, type: 3}
+        - {fileID: 8300000, guid: 2799fa2b7261f2e4cb24454888ce4b32, type: 3}
+        - {fileID: 8300000, guid: b6cf468b658570043a9063ea7f2df42b, type: 3}
+        - {fileID: 8300000, guid: a72baee2860b68d4695d22ae2a5a35ef, type: 3}
+        - {fileID: 8300000, guid: 4f4092cbada5cfd479bc24edbf22b5e9, type: 3}
+        - {fileID: 8300000, guid: 40dcd047d3419b04ba6b9da3d0e0edc0, type: 3}
+        - {fileID: 8300000, guid: 2f297a783d0a55543a23db6a748f6108, type: 3}
+        - {fileID: 8300000, guid: 89ec30b63a07c6143950c42f8ac35034, type: 3}
+      - code: Dirt
+        audioClip:
+        - {fileID: 8300000, guid: da66cce00100efb4c93afb44bb9fab93, type: 3}
+        - {fileID: 8300000, guid: ae6380e45cab4e04eb8b050d49606404, type: 3}
+        - {fileID: 8300000, guid: f986478c40d579a449a65af4d825a0b9, type: 3}
+        - {fileID: 8300000, guid: a755a821e5f3d5047b6a8e00e553f751, type: 3}
+        - {fileID: 8300000, guid: 02ac9a522be8da6408cadc63031cdb49, type: 3}
+        - {fileID: 8300000, guid: d2fa13d38d12d8e408d12778d368d21e, type: 3}
+        - {fileID: 8300000, guid: 412a797dc1d728c408b12b0bb502d3c5, type: 3}
+        - {fileID: 8300000, guid: e39c9d5826cd9664397fc49ba58d78fa, type: 3}
+        - {fileID: 8300000, guid: 73284c54bf358464fb8dfc78213b7c60, type: 3}
+        - {fileID: 8300000, guid: afcaf282cc6b219489300d93afbd92d2, type: 3}
+      - code: Water
+        audioClip:
+        - {fileID: 8300000, guid: f9534722918ff0942bc15fc08abb447c, type: 3}
+        - {fileID: 8300000, guid: 5634e984a1bdee14997e1c954c048692, type: 3}
+        - {fileID: 8300000, guid: 3791ef7a3071a604c8404f7e035ef655, type: 3}
+        - {fileID: 8300000, guid: 944a0a0f6f3e77b41a69fbd0a30551fe, type: 3}
+        - {fileID: 8300000, guid: 8a42ad081e2c04c4f9de6c5e340de21f, type: 3}
+    - code: Block
+      audio_Array:
+      - code: Metal
+        audioClip:
+        - {fileID: 8300000, guid: faec06a6b0d485d4284706b7d177a144, type: 3}
+        - {fileID: 8300000, guid: 80e823f0bd89fd340be70ac3ab872cca, type: 3}
+    - code: BlockBreak
+      audio_Array:
+      - code: Metal
+        audioClip:
+        - {fileID: 8300000, guid: 37d87e5b7103c9e4ca90f1d2f0ac0742, type: 3}
+    - code: Land
+      audio_Array:
+      - code: Concrete
+        audioClip:
+        - {fileID: 8300000, guid: 7af8bfb906232f34bb51021f5c98a9f7, type: 3}
+        - {fileID: 8300000, guid: 3e7e6ed206e8874428ebdd9be0dd3f5a, type: 3}
+        - {fileID: 8300000, guid: 5003a7fae62711243abb866852c40ead, type: 3}
+      - code: Wood
+        audioClip:
+        - {fileID: 8300000, guid: 5d850e330d483f9459f2f5fe4d99e4d5, type: 3}
+        - {fileID: 8300000, guid: 2a4d8ed0b054c1649aedd8a2d667a8b0, type: 3}
+        - {fileID: 8300000, guid: 0f65f4d2aa58a9247b3a70b0c1f3fdfc, type: 3}
+        - {fileID: 8300000, guid: 6d90359ae43765847a1fb43bac4ea98a, type: 3}
+        - {fileID: 8300000, guid: 7694fa3904ed9e549a0e9a3e6ab39e7f, type: 3}
+      - code: Dirt
+        audioClip:
+        - {fileID: 8300000, guid: 3e7e6ed206e8874428ebdd9be0dd3f5a, type: 3}
+        - {fileID: 8300000, guid: 5003a7fae62711243abb866852c40ead, type: 3}
+        - {fileID: 8300000, guid: 1eb14ba775f0f214788c32aac1b5f567, type: 3}
+        - {fileID: 8300000, guid: 0695d9ad76df5f548b9b317e2b707f8a, type: 3}
+    - code: Dodge
+      audio_Array:
+      - code: Concrete
+        audioClip:
+        - {fileID: 8300000, guid: 0869cde4707cf344ba0a3ea7fcd77348, type: 3}
+    - code: Slide
+      audio_Array:
+      - code: Concrete
+        audioClip:
+        - {fileID: 8300000, guid: 7b4e3ea8fc7c7ff42a191138966437e5, type: 3}
+    - code: LightMetalArmor
+      audio_Array:
+      - code: FootSteps
+        audioClip:
+        - {fileID: 8300000, guid: 3bae8f8b0e894804490c5222bc6773dd, type: 3}
+        - {fileID: 8300000, guid: 90f16b40e97ed9a45bd52fe200e0cd5d, type: 3}
+        - {fileID: 8300000, guid: 47e27866aceec144d88637e2a0530073, type: 3}
+      - code: Action
+        audioClip:
+        - {fileID: 8300000, guid: dd8e2522626652245bc4f3a5852e4403, type: 3}
+        - {fileID: 8300000, guid: a52579c652dd9ae4db1f8844f47cba65, type: 3}
+        - {fileID: 8300000, guid: 6497d08885ddad24abf32a225a52b21c, type: 3}

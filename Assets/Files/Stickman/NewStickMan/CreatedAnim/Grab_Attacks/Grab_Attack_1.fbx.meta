@@ -1,0 +1,2061 @@
+fileFormatVersion: 2
+guid: 98e3f7655c4044a458110d9419955462
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Bone
+    100002: Bone_end
+    100004: foot.L
+    100006: foot.R
+    100008: FootController.L
+    100010: FootController.R
+    100012: forearm.L
+    100014: forearm.R
+    100016: //RootNode
+    100018: Grab_InteractPoint
+    100020: hand.R.003
+    100022: L_Elbow
+    100024: L_Elbow_end
+    100026: L_Hand
+    100028: L_Knee
+    100030: L_Knee_end
+    100032: L_LowerIndex
+    100034: L_LowerIndex_end
+    100036: L_LowerThumb
+    100038: L_LowerThumb_end
+    100040: L_MidIndex
+    100042: L_MidThumb
+    100044: L_SHolder
+    100046: L_SHolder_end
+    100048: L_Sword
+    100050: L_Sword_end
+    100052: L_UpperIndex
+    100054: L_UpperThumb
+    100056: LowerIndex.R
+    100058: LowerIndex.R_end
+    100060: LowerSpineControl
+    100062: LowerSpineControl_end
+    100064: LowerThumb.R
+    100066: LowerThumb.R_end
+    100068: Mech_ForArmFK.L
+    100070: Mech_ForeArmFK.R
+    100072: Mech_ForearmIK.L
+    100074: Mech_ForearmIK.L_end
+    100076: Mech_ForearmIK.R
+    100078: Mech_ForearmIK.R_end
+    100080: Mech_HandFK.L
+    100082: Mech_HandFK.L_end
+    100084: Mech_HandFK.R
+    100086: Mech_HandFK.R_end
+    100088: Mech_HandIK.L
+    100090: Mech_HandIK.L_end
+    100092: Mech_HandIK.R
+    100094: Mech_HandIK.R_end
+    100096: Mech_Shoulder.L
+    100098: Mech_Shoulder.R
+    100100: Mech_ShoulderRotator.L
+    100102: Mech_ShoulderRotator.L.001
+    100104: Mech_ShoulderRotator.L.001_end
+    100106: Mech_ShoulderRotator.L_end
+    100108: Mech_ShoulderRotator.R
+    100110: Mech_ShoulderRotator.R.001
+    100112: Mech_ShoulderRotator.R.001_end
+    100114: Mech_ShoulderRotator.R_end
+    100116: Mech_UpperArmFK.L
+    100118: Mech_UpperArmFK.R
+    100120: Mech_UpperArmIK.L
+    100122: Mech_UpperArmIK.R
+    100124: midIndex.R
+    100126: MidThumb.R
+    100128: pelvis.L
+    100130: pelvis.R
+    100132: Player_Armature
+    100134: R_Elbow
+    100136: R_Elbow_end
+    100138: R_Knee
+    100140: R_Knee_end
+    100142: R_SHolder
+    100144: R_SHolder_end
+    100146: R_Sword
+    100148: R_Sword_end
+    100150: RootBone
+    100152: shin.L
+    100154: shin.R
+    100156: shoulder.L
+    100158: shoulder.R
+    100160: spine
+    100162: spine.001
+    100164: spine.002
+    100166: spine.003
+    100168: spine.004
+    100170: spine.005
+    100172: spine.005_end
+    100174: spine.006
+    100176: spine.007
+    100178: spine.008
+    100180: StickMan
+    100182: thigh.L
+    100184: thigh.R
+    100186: toe.L
+    100188: toe.L_end
+    100190: toe.R
+    100192: toe.R_end
+    100194: upper_arm.L
+    100196: upper_arm.R
+    100198: UpperBodyController
+    100200: UpperIndex.R
+    100202: UpperSpineControl
+    100204: UpperSpineControl_end
+    100206: Upperthumb.R
+    400000: Bone
+    400002: Bone_end
+    400004: foot.L
+    400006: foot.R
+    400008: FootController.L
+    400010: FootController.R
+    400012: forearm.L
+    400014: forearm.R
+    400016: //RootNode
+    400018: Grab_InteractPoint
+    400020: hand.R.003
+    400022: L_Elbow
+    400024: L_Elbow_end
+    400026: L_Hand
+    400028: L_Knee
+    400030: L_Knee_end
+    400032: L_LowerIndex
+    400034: L_LowerIndex_end
+    400036: L_LowerThumb
+    400038: L_LowerThumb_end
+    400040: L_MidIndex
+    400042: L_MidThumb
+    400044: L_SHolder
+    400046: L_SHolder_end
+    400048: L_Sword
+    400050: L_Sword_end
+    400052: L_UpperIndex
+    400054: L_UpperThumb
+    400056: LowerIndex.R
+    400058: LowerIndex.R_end
+    400060: LowerSpineControl
+    400062: LowerSpineControl_end
+    400064: LowerThumb.R
+    400066: LowerThumb.R_end
+    400068: Mech_ForArmFK.L
+    400070: Mech_ForeArmFK.R
+    400072: Mech_ForearmIK.L
+    400074: Mech_ForearmIK.L_end
+    400076: Mech_ForearmIK.R
+    400078: Mech_ForearmIK.R_end
+    400080: Mech_HandFK.L
+    400082: Mech_HandFK.L_end
+    400084: Mech_HandFK.R
+    400086: Mech_HandFK.R_end
+    400088: Mech_HandIK.L
+    400090: Mech_HandIK.L_end
+    400092: Mech_HandIK.R
+    400094: Mech_HandIK.R_end
+    400096: Mech_Shoulder.L
+    400098: Mech_Shoulder.R
+    400100: Mech_ShoulderRotator.L
+    400102: Mech_ShoulderRotator.L.001
+    400104: Mech_ShoulderRotator.L.001_end
+    400106: Mech_ShoulderRotator.L_end
+    400108: Mech_ShoulderRotator.R
+    400110: Mech_ShoulderRotator.R.001
+    400112: Mech_ShoulderRotator.R.001_end
+    400114: Mech_ShoulderRotator.R_end
+    400116: Mech_UpperArmFK.L
+    400118: Mech_UpperArmFK.R
+    400120: Mech_UpperArmIK.L
+    400122: Mech_UpperArmIK.R
+    400124: midIndex.R
+    400126: MidThumb.R
+    400128: pelvis.L
+    400130: pelvis.R
+    400132: Player_Armature
+    400134: R_Elbow
+    400136: R_Elbow_end
+    400138: R_Knee
+    400140: R_Knee_end
+    400142: R_SHolder
+    400144: R_SHolder_end
+    400146: R_Sword
+    400148: R_Sword_end
+    400150: RootBone
+    400152: shin.L
+    400154: shin.R
+    400156: shoulder.L
+    400158: shoulder.R
+    400160: spine
+    400162: spine.001
+    400164: spine.002
+    400166: spine.003
+    400168: spine.004
+    400170: spine.005
+    400172: spine.005_end
+    400174: spine.006
+    400176: spine.007
+    400178: spine.008
+    400180: StickMan
+    400182: thigh.L
+    400184: thigh.R
+    400186: toe.L
+    400188: toe.L_end
+    400190: toe.R
+    400192: toe.R_end
+    400194: upper_arm.L
+    400196: upper_arm.R
+    400198: UpperBodyController
+    400200: UpperIndex.R
+    400202: UpperSpineControl
+    400204: UpperSpineControl_end
+    400206: Upperthumb.R
+    4300000: StickMan
+    7400000: Player_Armature|Grab
+    7400002: Player_Armature|Grab_Attack_1
+    7400004: Player_Armature|Grab_Attack_1_Victim
+    7400006: Player_Armature|Idle
+    9500000: //RootNode
+    13700000: StickMan
+    2186277476908879412: ImportLogs
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: StickMan
+    second: {fileID: 2100000, guid: f78f0ef2fcf3c8945b76961f77b03003, type: 2}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 0
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: "Avatar Rig Configuration mis-match. Inbetween bone rotation
+      in configuration does not match rotation in animation file:\n\t'spine.006' :
+      rotation error = 3.248145 deg\n\t'spine.007' : rotation error = 0.812037 deg\n\t'spine.008'
+      : rotation error = 2.030096 deg\n"
+    animationImportErrors: 
+    animationImportWarnings: "\nClip 'Player_Armature|Grab' has import animation warnings
+      that might lower retargeting quality:\nNote: Activate translation DOF on avatar
+      to improve retargeting quality.\n\t'spine.006' is inbetween humanoid transforms
+      and has rotation animation that will be discarded.\n\t'spine.007' is inbetween
+      humanoid transforms and has rotation animation that will be discarded.\n\t'spine.008'
+      is inbetween humanoid transforms and has rotation animation that will be discarded.\n\nClip
+      'Player_Armature|Grab_Attack_1' has import animation warnings that might lower
+      retargeting quality:\nNote: Activate translation DOF on avatar to improve retargeting
+      quality.\n\t'spine.006' is inbetween humanoid transforms and has rotation animation
+      that will be discarded.\n\t'spine.007' is inbetween humanoid transforms and
+      has rotation animation that will be discarded.\n\t'spine.008' is inbetween humanoid
+      transforms and has rotation animation that will be discarded.\nEvent EndGrab
+      has a time (0.743497) outside the clip's valid range (0.000000..0.666667). It
+      will never be fired"
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Player_Armature|Grab
+      takeName: Player_Armature|Grab
+      firstFrame: 0
+      lastFrame: 15
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.4797688
+        functionName: Grab
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player_Armature
+        weight: 1
+      - path: Player_Armature/RootBone
+        weight: 1
+      - path: Player_Armature/RootBone/FootController.L
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee/L_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee/R_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L/Mech_HandFK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R/Mech_HandFK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005/spine.005_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl/LowerSpineControl_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L/Mech_HandIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R/Mech_HandIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow/L_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder/L_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow/R_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder/R_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L/Mech_ShoulderRotator.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001/Mech_ShoulderRotator.L.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L/Mech_ForearmIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword/L_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex/L_LowerIndex_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb/L_LowerThumb_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R/Mech_ShoulderRotator.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001/Mech_ShoulderRotator.R.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R/Mech_ForearmIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword/R_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R/LowerIndex.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R/LowerThumb.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone/Bone_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl/UpperSpineControl_end
+        weight: 0
+      - path: StickMan
+        weight: 0
+      - path: StickMan/Grab_InteractPoint
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Player_Armature|Grab_Attack_1
+      takeName: Player_Armature|Grab_Attack_1
+      firstFrame: 0
+      lastFrame: 25
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.80057806
+        functionName: EndGrab
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player_Armature
+        weight: 1
+      - path: Player_Armature/RootBone
+        weight: 1
+      - path: Player_Armature/RootBone/FootController.L
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee/L_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee/R_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L/Mech_HandFK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R/Mech_HandFK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005/spine.005_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl/LowerSpineControl_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L/Mech_HandIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R/Mech_HandIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow/L_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder/L_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow/R_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder/R_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L/Mech_ShoulderRotator.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001/Mech_ShoulderRotator.L.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L/Mech_ForearmIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword/L_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex/L_LowerIndex_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb/L_LowerThumb_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R/Mech_ShoulderRotator.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001/Mech_ShoulderRotator.R.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R/Mech_ForearmIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword/R_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R/LowerIndex.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R/LowerThumb.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone/Bone_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl/UpperSpineControl_end
+        weight: 0
+      - path: StickMan
+        weight: 0
+      - path: StickMan/Grab_InteractPoint
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Player_Armature|Grab_Attack_1_Victim
+      takeName: Player_Armature|Grab_Attack_1_Victim
+      firstFrame: 0
+      lastFrame: 18
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 1
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 1
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events:
+      - time: 0.9913295
+        functionName: EndGrab
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 0
+        messageOptions: 0
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player_Armature
+        weight: 1
+      - path: Player_Armature/RootBone
+        weight: 1
+      - path: Player_Armature/RootBone/FootController.L
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee/L_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee/R_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L/Mech_HandFK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R/Mech_HandFK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005/spine.005_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl/LowerSpineControl_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L/Mech_HandIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R/Mech_HandIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow/L_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder/L_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow/R_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder/R_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L/Mech_ShoulderRotator.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001/Mech_ShoulderRotator.L.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L/Mech_ForearmIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword/L_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex/L_LowerIndex_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb/L_LowerThumb_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R/Mech_ShoulderRotator.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001/Mech_ShoulderRotator.R.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R/Mech_ForearmIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword/R_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R/LowerIndex.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R/LowerThumb.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone/Bone_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl/UpperSpineControl_end
+        weight: 0
+      - path: StickMan
+        weight: 0
+      - path: StickMan/Grab_InteractPoint
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Player_Armature|Idle
+      takeName: Player_Armature|Idle
+      firstFrame: 0
+      lastFrame: 1
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
+      loopBlendPositionXZ: 1
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 0
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 1
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Player_Armature
+        weight: 1
+      - path: Player_Armature/RootBone
+        weight: 1
+      - path: Player_Armature/RootBone/FootController.L
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.L/L_Knee/L_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee
+        weight: 0
+      - path: Player_Armature/RootBone/FootController.R/R_Knee/R_Knee_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.L/Mech_UpperArmFK.L/Mech_ForArmFK.L/Mech_HandFK.L/Mech_HandFK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R
+        weight: 0
+      - path: Player_Armature/RootBone/Mech_Shoulder.R/Mech_UpperArmFK.R/Mech_ForeArmFK.R/Mech_HandFK.R/Mech_HandFK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005
+        weight: 0
+      - path: Player_Armature/RootBone/spine.005/spine.005_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/LowerSpineControl/LowerSpineControl_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.L/Mech_HandIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/Mech_HandIK.R/Mech_HandIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.L/thigh.L/shin.L/foot.L/toe.L/toe.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/pelvis.R/thigh.R/shin.R/foot.R/toe.R/toe.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_Elbow/L_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/L_SHolder/L_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_Elbow/R_Elbow_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/R_SHolder/R_SHolder_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L/Mech_ShoulderRotator.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_ShoulderRotator.L.001/Mech_ShoulderRotator.L.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/Mech_UpperArmIK.L/Mech_ForearmIK.L/Mech_ForearmIK.L_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_Sword/L_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperIndex/L_MidIndex/L_LowerIndex/L_LowerIndex_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.L/upper_arm.L/forearm.L/L_Hand/L_UpperThumb/L_MidThumb/L_LowerThumb/L_LowerThumb_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R/Mech_ShoulderRotator.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_ShoulderRotator.R.001/Mech_ShoulderRotator.R.001_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/Mech_UpperArmIK.R/Mech_ForearmIK.R/Mech_ForearmIK.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/R_Sword/R_Sword_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/UpperIndex.R/midIndex.R/LowerIndex.R/LowerIndex.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/shoulder.R/upper_arm.R/forearm.R/hand.R.003/Upperthumb.R/MidThumb.R/LowerThumb.R/LowerThumb.R_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone
+        weight: 1
+      - path: Player_Armature/RootBone/UpperBodyController/spine/spine.006/spine.001/spine.007/spine.002/spine.008/spine.003/spine.004/Bone/Bone_end
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl
+        weight: 0
+      - path: Player_Armature/RootBone/UpperBodyController/UpperSpineControl/UpperSpineControl_end
+        weight: 0
+      - path: StickMan
+        weight: 0
+      - path: StickMan/Grab_InteractPoint
+        weight: 0
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 0
+    importBlendShapes: 1
+    importCameras: 0
+    importLights: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 4
+    normalCalculationMode: 0
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human:
+    - boneName: spine
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh.L
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: thigh.R
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shin.L
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shin.R
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot.L
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: foot.R
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine.002
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine.003
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: spine.004
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Bone
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder.L
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: shoulder.R
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm.L
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: upper_arm.R
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm.L
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: forearm.R
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_Hand
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: hand.R.003
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toe.L
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: toe.R
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_UpperIndex
+      humanName: Left Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_MidIndex
+      humanName: Left Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_LowerIndex
+      humanName: Left Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_MidThumb
+      humanName: Left Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: L_LowerThumb
+      humanName: Left Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: UpperIndex.R
+      humanName: Right Index Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: midIndex.R
+      humanName: Right Index Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerIndex.R
+      humanName: Right Index Distal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: MidThumb.R
+      humanName: Right Middle Proximal
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LowerThumb.R
+      humanName: Right Middle Intermediate
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: Grab_Attack_1(Clone)
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Player_Armature
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 100, y: 100.00001, z: 100.00001}
+    - name: RootBone
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: -0.00000008940697, z: 1, w: 0}
+      scale: {x: 0.9999996, y: 0.9999996, z: 1.0000002}
+    - name: Mech_Shoulder.R
+      parentName: 
+      position: {x: -0.00826753, y: -0.00031221763, z: 0.06822242}
+      rotation: {x: -0.35101333, y: -0.61383194, z: -0.61383194, w: -0.35101333}
+      scale: {x: 1.000002, y: 1.0000004, z: 1.0000005}
+    - name: Mech_UpperArmFK.R
+      parentName: 
+      position: {x: -2.9802322e-10, y: -0.0000000020535662, z: -4.4703483e-10}
+      rotation: {x: -0.39418957, y: 0.38952032, z: -0.59338963, w: 0.58376133}
+      scale: {x: 1, y: 0.99999994, z: 1.0000001}
+    - name: Mech_ForeArmFK.R
+      parentName: 
+      position: {x: -0.000000003427267, y: 0.014155266, z: -4.4703483e-10}
+      rotation: {x: 0.13041003, y: 0.00016792864, z: -0.03362336, w: 0.9908899}
+      scale: {x: 0.9999996, y: 0.9999994, z: 1.0000001}
+    - name: Mech_HandFK.R
+      parentName: 
+      position: {x: -9.0338287e-10, y: 0.013523021, z: 7.4505804e-11}
+      rotation: {x: -0.1498826, y: 0.70377123, z: 0.14528055, w: 0.6790691}
+      scale: {x: 1.0000002, y: 1, z: 1}
+    - name: Mech_HandFK.R_end
+      parentName: 
+      position: {x: -0, y: 0.0022757559, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.005
+      parentName: 
+      position: {x: -0, y: -0.0007429611, z: 0.049997915}
+      rotation: {x: 0.00000003818466, y: -0.7071068, z: -0.7071068, w: 0.000000038988546}
+      scale: {x: 0.99999946, y: 0.9999999, z: 0.9999998}
+    - name: spine.005_end
+      parentName: 
+      position: {x: -0, y: 0.0052108, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootController.L
+      parentName: 
+      position: {x: 0.008600454, y: 0.0017108015, z: 0.0037398546}
+      rotation: {x: 0, y: 0, z: -1, w: 0.0000000045474744}
+      scale: {x: 0.99999964, y: 0.9999999, z: 0.9999999}
+    - name: L_Knee
+      parentName: 
+      position: {x: 0.0009858188, y: -0.024867633, z: 0.022640537}
+      rotation: {x: 0.9984778, y: -0.0000000037252903, z: -0.05515511, w: -2.5081648e-10}
+      scale: {x: 1, y: 1.0000001, z: 0.99999994}
+    - name: L_Knee_end
+      parentName: 
+      position: {x: -0, y: 0.0055581974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: FootController.R
+      parentName: 
+      position: {x: -0.008394756, y: -0.0034624885, z: 0.0037398546}
+      rotation: {x: 0, y: 0, z: -1, w: 0}
+      scale: {x: 0.9999991, y: 0.99999934, z: 1}
+    - name: R_Knee
+      parentName: 
+      position: {x: -0.0009858179, y: -0.024867633, z: 0.022640537}
+      rotation: {x: 0.9984778, y: -0.000000020489097, z: 0.055155113, w: 0}
+      scale: {x: 1, y: 0.9999999, z: 0.9999997}
+    - name: R_Knee_end
+      parentName: 
+      position: {x: -0, y: 0.0055581974, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperBodyController
+      parentName: 
+      position: {x: 0.000006368775, y: -0.0007429611, z: 0.047147926}
+      rotation: {x: -0.000000035198887, y: -0.55862874, z: 0.8294179, w: 0.00000004208563}
+      scale: {x: 0.9999994, y: 0.99999976, z: 0.9999993}
+    - name: LowerSpineControl
+      parentName: 
+      position: {x: 0.0000063676384, y: 0.0067093894, z: 0.012641466}
+      rotation: {x: -0.98149717, y: -0.0000000048696553, z: -0.000000054648403, w: -0.19147697}
+      scale: {x: 1.0000001, y: 0.99999964, z: 0.999999}
+    - name: LowerSpineControl_end
+      parentName: 
+      position: {x: -0, y: 0.0027706956, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperSpineControl
+      parentName: 
+      position: {x: 0.000006366968, y: -0.013111218, z: 0.020680899}
+      rotation: {x: -0.98149717, y: -0.0000000037538337, z: -0.00000005486609, w: -0.19147676}
+      scale: {x: 1, y: 0.9999998, z: 0.99999946}
+    - name: UpperSpineControl_end
+      parentName: 
+      position: {x: -0, y: 0.0027706956, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine
+      parentName: 
+      position: {x: 0.0000063687376, y: -0.0021500767, z: 0.0008720895}
+      rotation: {x: -0.06646372, y: -0.00000005502681, z: 0.0000000073884925, w: 0.9977889}
+      scale: {x: 1, y: 0.99999994, z: 0.9999998}
+    - name: pelvis.L
+      parentName: 
+      position: {x: -0, y: 0.006575193, z: -4.842877e-10}
+      rotation: {x: -0.51092225, y: 0.36380187, z: -0.7444555, w: -0.22889449}
+      scale: {x: 1.0000005, y: 1.0000001, z: 1.0000002}
+    - name: thigh.L
+      parentName: 
+      position: {x: 0.00063305005, y: 0.005285789, z: -0.00038800246}
+      rotation: {x: 0.5545227, y: -0.5035419, z: 0.62775373, w: -0.21183851}
+      scale: {x: 1.0000001, y: 0.99999887, z: 0.9999993}
+    - name: shin.L
+      parentName: 
+      position: {x: -7.45058e-10, y: 0.020146407, z: -7.45058e-10}
+      rotation: {x: 0.09338637, y: 0.037476614, z: -0.0457829, w: 0.99387044}
+      scale: {x: 1, y: 0.9999994, z: 1.0000007}
+    - name: foot.L
+      parentName: 
+      position: {x: -6.519258e-10, y: 0.022789989, z: -1.11758706e-10}
+      rotation: {x: -0.5504716, y: 0.02814065, z: -0.0073557682, w: 0.8343471}
+      scale: {x: 1.0000004, y: 0.9999998, z: 0.99999946}
+    - name: toe.L
+      parentName: 
+      position: {x: -4.2462388e-11, y: 0.0049501937, z: -7.4505804e-11}
+      rotation: {x: -0.00000014030283, y: 0.967492, z: -0.25290164, w: -0.00000042160087}
+      scale: {x: 0.99999994, y: 0.9999994, z: 1.0000002}
+    - name: toe.L_end
+      parentName: 
+      position: {x: -0, y: 0.0029027315, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: pelvis.R
+      parentName: 
+      position: {x: -0, y: 0.006575193, z: -4.842877e-10}
+      rotation: {x: -0.51092225, y: -0.3638019, z: 0.7444555, w: -0.22889447}
+      scale: {x: 1.0000004, y: 1.0000002, z: 1.0000001}
+    - name: thigh.R
+      parentName: 
+      position: {x: -0.00063305226, y: 0.0052857897, z: -0.0003880045}
+      rotation: {x: 0.55452263, y: 0.5035419, z: -0.6277537, w: -0.21183848}
+      scale: {x: 1.0000008, y: 0.999999, z: 0.9999998}
+    - name: shin.R
+      parentName: 
+      position: {x: 0.0000000012503005, y: 0.020146396, z: -9.313225e-11}
+      rotation: {x: 0.09338641, y: -0.037476726, z: 0.04578287, w: 0.99387044}
+      scale: {x: 1.0000002, y: 0.9999997, z: 1.0000004}
+    - name: foot.R
+      parentName: 
+      position: {x: -3.632158e-10, y: 0.022789992, z: -1.4901161e-10}
+      rotation: {x: -0.5504716, y: -0.028140651, z: 0.0073558036, w: 0.83434707}
+      scale: {x: 0.9999999, y: 0.9999997, z: 0.9999993}
+    - name: toe.R
+      parentName: 
+      position: {x: -6.6173555e-12, y: 0.0049501937, z: 2.2351741e-10}
+      rotation: {x: 0.00000010892845, y: 0.967492, z: -0.2529018, w: 0.00000045552096}
+      scale: {x: 0.9999999, y: 0.99999887, z: 1.0000002}
+    - name: toe.R_end
+      parentName: 
+      position: {x: -0, y: 0.0029027315, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.006
+      parentName: 
+      position: {x: -5.5879353e-11, y: 0.000007626053, z: -0.0000019664365}
+      rotation: {x: -0.99205315, y: -0.0000000021522006, z: 0.000000018608553, w: -0.12581947}
+      scale: {x: 1.0000002, y: 1.0000002, z: 1.0000029}
+    - name: spine.001
+      parentName: 
+      position: {x: -0, y: -0.0000000012718202, z: 1.5832484e-10}
+      rotation: {x: 0.061593827, y: -0.00000012797592, z: -0.000000006553919, w: 0.9981013}
+      scale: {x: 0.99999994, y: 1, z: 1.0000002}
+    - name: spine.007
+      parentName: 
+      position: {x: -1.2514646e-10, y: 0.005902081, z: -7.363269e-11}
+      rotation: {x: -0.061593857, y: 0.000000037212303, z: 0.000000012368613, w: 0.99810135}
+      scale: {x: 0.99999994, y: 1.0000002, z: 0.9999999}
+    - name: spine.002
+      parentName: 
+      position: {x: -2.561137e-11, y: -3.8029888e-10, z: 5.0349627e-11}
+      rotation: {x: -0.015908305, y: 0.00000010913456, z: 0.0000000011678561, w: 0.99987346}
+      scale: {x: 0.99999994, y: 0.9999999, z: 0.9999999}
+    - name: spine.008
+      parentName: 
+      position: {x: -1.0244548e-10, y: 0.007467946, z: -1.3504177e-10}
+      rotation: {x: 0.015908297, y: -0.000000018196648, z: 2.789883e-10, w: 0.9998735}
+      scale: {x: 0.99999994, y: 1.0000006, z: 1.0000007}
+    - name: spine.003
+      parentName: 
+      position: {x: -1.3969838e-11, y: 0.000000003206615, z: -6.0535965e-11}
+      rotation: {x: -0.014232916, y: -0.00000007279265, z: 0.0000000018063041, w: 0.99989873}
+      scale: {x: 1.0000001, y: 1, z: 0.9999999}
+    - name: L_Elbow
+      parentName: 
+      position: {x: -0.022379478, y: 0.005849317, z: -0.028089212}
+      rotation: {x: -0.48908967, y: -0.51088816, z: 0.49654824, w: 0.50321424}
+      scale: {x: 0.99999976, y: 0.99999994, z: 0.9999999}
+    - name: L_Elbow_end
+      parentName: 
+      position: {x: -0, y: 0.0044516036, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Elbow
+      parentName: 
+      position: {x: 0.022379465, y: 0.005849315, z: -0.028089222}
+      rotation: {x: 0.48908985, y: -0.51088804, z: 0.4965481, w: -0.50321436}
+      scale: {x: 0.9999997, y: 1, z: 0.9999996}
+    - name: R_Elbow_end
+      parentName: 
+      position: {x: -0, y: 0.0044516036, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: spine.004
+      parentName: 
+      position: {x: -5.5879353e-11, y: 0.008346809, z: 4.6566126e-11}
+      rotation: {x: 0.2034954, y: -0.00000002439352, z: -0.000000033181323, w: 0.9790759}
+      scale: {x: 0.99999934, y: 0.9999998, z: 1.0000001}
+    - name: Bone
+      parentName: 
+      position: {x: -2.9802322e-10, y: 0.002831665, z: -0.0000000015925615}
+      rotation: {x: -0.10828265, y: 0.00000020723894, z: -0.0000000019243271, w: 0.9941202}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.99999976}
+    - name: Bone_end
+      parentName: 
+      position: {x: -0, y: 0.009658815, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoulder.L
+      parentName: 
+      position: {x: -0.00079047517, y: 0.0059276563, z: 0.0033794963}
+      rotation: {x: -0.58809686, y: 0.37464708, z: 0.37424365, w: 0.61132914}
+      scale: {x: 0.99999976, y: 0.9999999, z: 0.9999997}
+    - name: upper_arm.L
+      parentName: 
+      position: {x: -0.0010941991, y: 0.008134778, z: -0.0007570261}
+      rotation: {x: 0.13422337, y: -0.6950433, z: 0.14392743, w: 0.6915083}
+      scale: {x: 1.0000006, y: 1.0000004, z: 0.99999905}
+    - name: forearm.L
+      parentName: 
+      position: {x: 1.4901161e-10, y: 0.014155264, z: 0.000000001490116}
+      rotation: {x: 0.06587511, y: 0.00032788035, z: 0.013211239, w: 0.9977403}
+      scale: {x: 0.9999999, y: 1.0000001, z: 0.99999976}
+    - name: L_Hand
+      parentName: 
+      position: {x: 8.9406965e-10, y: 0.013523021, z: -5.9604643e-10}
+      rotation: {x: -0.17762983, y: -0.7015705, z: -0.12656656, w: 0.6784006}
+      scale: {x: 1.0000004, y: 0.9999999, z: 0.9999991}
+    - name: L_UpperThumb
+      parentName: 
+      position: {x: 0.0011619474, y: 0.0010913626, z: 0.00038293138}
+      rotation: {x: 0.062036537, y: -0.5027253, z: -0.4759398, w: 0.71895766}
+      scale: {x: 0.99999976, y: 1.0000008, z: 1.0000002}
+    - name: L_MidThumb
+      parentName: 
+      position: {x: 7.45058e-10, y: 0.0017500287, z: -0.0000000038743018}
+      rotation: {x: 0.036259312, y: -0.10758335, z: 0.112539686, w: 0.98714024}
+      scale: {x: 0.9999997, y: 1.0000002, z: 0.99999917}
+    - name: L_LowerThumb
+      parentName: 
+      position: {x: -7.45058e-10, y: 0.0016756265, z: -0.0000000017881393}
+      rotation: {x: 0.03201518, y: -0.021580912, z: 0.014439071, w: 0.9991501}
+      scale: {x: 0.9999999, y: 1.0000006, z: 0.9999997}
+    - name: L_LowerThumb_end
+      parentName: 
+      position: {x: -0, y: 0.0010966959, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_UpperIndex
+      parentName: 
+      position: {x: -0.000017071217, y: 0.0031529497, z: 0.00001053974}
+      rotation: {x: 0.20269221, y: 0.0028531982, z: -0.32622933, w: 0.9232997}
+      scale: {x: 1.0000001, y: 1.0000001, z: 1}
+    - name: L_MidIndex
+      parentName: 
+      position: {x: -0, y: 0.0017913096, z: 7.45058e-10}
+      rotation: {x: 0.03536818, y: 0.00037938348, z: -0.0017218734, w: 0.99937284}
+      scale: {x: 1.0000001, y: 1.0000004, z: 0.9999999}
+    - name: L_LowerIndex
+      parentName: 
+      position: {x: -5.9604643e-10, y: 0.0014334407, z: 0.000000002682209}
+      rotation: {x: 0.03591204, y: 0.00000016391272, z: 0.0000003725289, w: 0.999355}
+      scale: {x: 0.9999998, y: 1.0000001, z: 1.0000001}
+    - name: L_LowerIndex_end
+      parentName: 
+      position: {x: -0, y: 0.0016007957, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_Sword
+      parentName: 
+      position: {x: -0.00006807506, y: 0.0036312346, z: 0.0012569211}
+      rotation: {x: 0.6786437, y: 0.71992093, z: 0.08483282, w: -0.118152425}
+      scale: {x: 1.0000002, y: 1.0000004, z: 0.99999964}
+    - name: L_Sword_end
+      parentName: 
+      position: {x: -0, y: 0.02285811, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_UpperArmIK.L
+      parentName: 
+      position: {x: -0.0010941986, y: 0.008134773, z: -0.00074575475}
+      rotation: {x: 0.1342234, y: -0.6950434, z: 0.14392743, w: 0.6915083}
+      scale: {x: 1.0000017, y: 1.0000021, z: 0.9999972}
+    - name: Mech_ForearmIK.L
+      parentName: 
+      position: {x: -0.000000002235174, y: 0.014155264, z: -0.0000000013411044}
+      rotation: {x: 0.1304101, y: -0.00016754861, z: 0.033623192, w: 0.9908899}
+      scale: {x: 0.9999999, y: 1.0000006, z: 0.9999993}
+    - name: Mech_ForearmIK.L_end
+      parentName: 
+      position: {x: -0, y: 0.013523024, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_ShoulderRotator.L
+      parentName: 
+      position: {x: -0.0010941983, y: 0.008134771, z: -0.0007454543}
+      rotation: {x: 0.6139812, y: -0.35091385, z: -0.3511592, w: 0.6136562}
+      scale: {x: 1.0000012, y: 1, z: 0.99999887}
+    - name: Mech_ShoulderRotator.L_end
+      parentName: 
+      position: {x: -0, y: 0.009313206, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_ShoulderRotator.L.001
+      parentName: 
+      position: {x: 0.0000000010384247, y: 0.0000000011920929, z: -3.470268e-10}
+      rotation: {x: 0.6139811, y: -0.35091394, z: -0.35115927, w: 0.61365616}
+      scale: {x: 1.0000013, y: 0.99999976, z: 0.9999986}
+    - name: Mech_ShoulderRotator.L.001_end
+      parentName: 
+      position: {x: -0, y: 0.0025078105, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: L_SHolder
+      parentName: 
+      position: {x: -0.0030967947, y: 0.0049457024, z: -0.0042510624}
+      rotation: {x: -0.6824083, y: 0.00000007962341, z: 0.000000074696636, w: 0.7309712}
+      scale: {x: 0.99999994, y: 1, z: 0.9999997}
+    - name: L_SHolder_end
+      parentName: 
+      position: {x: -0, y: 0.0011687792, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: shoulder.R
+      parentName: 
+      position: {x: 0.0007904766, y: 0.0059276554, z: 0.0033794956}
+      rotation: {x: -0.58809704, y: -0.37464678, z: -0.37424344, w: 0.6113294}
+      scale: {x: 0.9999997, y: 0.9999995, z: 0.9999994}
+    - name: upper_arm.R
+      parentName: 
+      position: {x: 0.0010941989, y: 0.008134778, z: -0.0007570295}
+      rotation: {x: 0.13422339, y: 0.6950433, z: -0.1439276, w: 0.6915083}
+      scale: {x: 1.0000008, y: 1.0000005, z: 0.99999917}
+    - name: forearm.R
+      parentName: 
+      position: {x: -8.1956386e-10, y: 0.014155266, z: -0.0000000017881393}
+      rotation: {x: 0.06587494, y: -0.00032785794, z: -0.013210877, w: 0.9977404}
+      scale: {x: 1.0000002, y: 0.9999995, z: 1}
+    - name: hand.R.003
+      parentName: 
+      position: {x: -8.1956386e-10, y: 0.013523021, z: -4.4703483e-10}
+      rotation: {x: -0.15839097, y: 0.70190233, z: 0.15350415, w: 0.67726064}
+      scale: {x: 1, y: 1, z: 0.99999946}
+    - name: Upperthumb.R
+      parentName: 
+      position: {x: -0.00088280346, y: 0.0013990056, z: 0.00041008793}
+      rotation: {x: 0.0882711, y: 0.44012228, z: 0.51244634, w: 0.73205155}
+      scale: {x: 0.99999905, y: 1.0000004, z: 1.0000001}
+    - name: MidThumb.R
+      parentName: 
+      position: {x: 0.0000000026263296, y: 0.001898387, z: 0.000000005736947}
+      rotation: {x: 0.09969139, y: 0.1218129, z: -0.13584524, w: 0.97814584}
+      scale: {x: 0.99999934, y: 1.0000012, z: 0.9999989}
+    - name: LowerThumb.R
+      parentName: 
+      position: {x: -7.357448e-10, y: 0.0014081842, z: -1.3038516e-10}
+      rotation: {x: 0.03085994, y: 0.023425868, z: -0.016186792, w: 0.9991181}
+      scale: {x: 1, y: 1.0000007, z: 0.9999994}
+    - name: LowerThumb.R_end
+      parentName: 
+      position: {x: -0, y: 0.0010776275, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: UpperIndex.R
+      parentName: 
+      position: {x: 0.00014564357, y: 0.0032588937, z: 0.00006432384}
+      rotation: {x: 0.22688375, y: -0.030169401, z: 0.27753446, w: 0.9330532}
+      scale: {x: 0.99999976, y: 1.000001, z: 0.99999934}
+    - name: midIndex.R
+      parentName: 
+      position: {x: -6.891787e-10, y: 0.0018864527, z: 7.45058e-10}
+      rotation: {x: 0.035734624, y: 0.0031454389, z: -0.0005947644, w: 0.99935627}
+      scale: {x: 0.99999976, y: 1, z: 0.9999991}
+    - name: LowerIndex.R
+      parentName: 
+      position: {x: -7.7998263e-10, y: 0.0016080947, z: 0.0000000037252903}
+      rotation: {x: 0.03546497, y: -0.0000003427264, z: -0.0000017583353, w: 0.99937093}
+      scale: {x: 1.0000001, y: 1.0000002, z: 0.9999999}
+    - name: LowerIndex.R_end
+      parentName: 
+      position: {x: -0, y: 0.0016007961, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_Sword
+      parentName: 
+      position: {x: 0.00031768202, y: 0.0036094575, z: 0.0014594885}
+      rotation: {x: -0.6520263, y: 0.7390906, z: 0.10420128, w: 0.13322498}
+      scale: {x: 1.0000008, y: 0.99999946, z: 0.9999992}
+    - name: R_Sword_end
+      parentName: 
+      position: {x: -0, y: 0.02285811, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_UpperArmIK.R
+      parentName: 
+      position: {x: 0.0010941667, y: 0.008134521, z: -0.00030249945}
+      rotation: {x: 0.13422339, y: 0.6950433, z: -0.1439276, w: 0.6915083}
+      scale: {x: 1.0000013, y: 1.0000011, z: 0.999997}
+    - name: Mech_ForearmIK.R
+      parentName: 
+      position: {x: -0.0000000010430813, y: 0.01415527, z: -8.1956386e-10}
+      rotation: {x: 0.1304101, y: 0.00016759332, z: -0.03362314, w: 0.9908899}
+      scale: {x: 1, y: 1.0000014, z: 0.9999993}
+    - name: Mech_ForearmIK.R_end
+      parentName: 
+      position: {x: -0, y: 0.013523024, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_ShoulderRotator.R
+      parentName: 
+      position: {x: 0.0010941888, y: 0.008134698, z: -0.00061514985}
+      rotation: {x: 0.70730245, y: -0.0029283455, z: -0.0028787134, w: 0.7068992}
+      scale: {x: 1, y: 1.0000002, z: 0.99999976}
+    - name: Mech_ShoulderRotator.R_end
+      parentName: 
+      position: {x: -0, y: 0.007582278, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_ShoulderRotator.R.001
+      parentName: 
+      position: {x: -2.2351741e-10, y: 7.21775e-10, z: 0.0000000012562669}
+      rotation: {x: 0.6139811, y: 0.35091364, z: 0.35115898, w: 0.6136563}
+      scale: {x: 1.0000013, y: 1.0000004, z: 0.99999905}
+    - name: Mech_ShoulderRotator.R.001_end
+      parentName: 
+      position: {x: -0, y: 0.0025078105, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: R_SHolder
+      parentName: 
+      position: {x: 0.003071845, y: 0.004945703, z: -0.004251063}
+      rotation: {x: -0.6824083, y: 0.00000007962341, z: 0.000000074696636, w: 0.7309712}
+      scale: {x: 0.99999994, y: 1, z: 0.9999997}
+    - name: R_SHolder_end
+      parentName: 
+      position: {x: -0, y: 0.0011687792, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_HandIK.L
+      parentName: 
+      position: {x: -0.012924275, y: 0.0038490137, z: -0.004809384}
+      rotation: {x: -0.65066785, y: 0.50581795, z: 0.4676174, w: 0.31955233}
+      scale: {x: 0.9999998, y: 0.999999, z: 0.99999756}
+    - name: Mech_HandIK.L_end
+      parentName: 
+      position: {x: -0, y: 0.0025137071, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_HandIK.R
+      parentName: 
+      position: {x: 0.012140798, y: 0.0044402108, z: -0.0020391145}
+      rotation: {x: -0.6772822, y: -0.47528005, z: -0.46582803, w: 0.3136908}
+      scale: {x: 1.0000005, y: 1.0000006, z: 0.99999946}
+    - name: Mech_HandIK.R_end
+      parentName: 
+      position: {x: -0, y: 0.0022757559, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Mech_Shoulder.L
+      parentName: 
+      position: {x: 0.008306567, y: -0.00032714292, z: 0.06799468}
+      rotation: {x: 0.000000025322453, y: -0.7071068, z: -0.7071068, w: 0.00000002612634}
+      scale: {x: 0.99999994, y: 1.0000007, z: 1.0000033}
+    - name: Mech_UpperArmFK.L
+      parentName: 
+      position: {x: 2.6077032e-10, y: -0.0000000035751144, z: 1.4901161e-10}
+      rotation: {x: -0.047628585, y: -0.0483549, z: 0.7107941, w: 0.70011795}
+      scale: {x: 1.0000001, y: 1.0000002, z: 1.0000001}
+    - name: Mech_ForArmFK.L
+      parentName: 
+      position: {x: -0.0000000054296105, y: 0.014155267, z: 6.3329936e-10}
+      rotation: {x: 0.13041009, y: -0.00016784294, z: 0.033623293, w: 0.99088985}
+      scale: {x: 1, y: 1.0000001, z: 0.9999998}
+    - name: Mech_HandFK.L
+      parentName: 
+      position: {x: -0.000000012405216, y: 0.013523026, z: 0.0000000016018747}
+      rotation: {x: -0.15523055, y: -0.7068712, z: -0.104892455, w: 0.68208086}
+      scale: {x: 0.99999946, y: 1.0000001, z: 1}
+    - name: Mech_HandFK.L_end
+      parentName: 
+      position: {x: -0, y: 0.0025137071, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: StickMan
+      parentName: 
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Grab_InteractPoint
+      parentName: 
+      position: {x: -0, y: -0.063463844, z: 0}
+      rotation: {x: 0.7071068, y: 0, z: -0, w: 0.7071067}
+      scale: {x: 0.01, y: 0.01, z: 0.01}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: Body
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 3
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

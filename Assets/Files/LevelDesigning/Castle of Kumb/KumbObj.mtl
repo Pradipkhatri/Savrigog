@@ -1,0 +1,149 @@
+# Blender MTL File: 'Castle of Kumb.blend'
+# Material Count: 14
+
+newmtl Bronze
+Ns 575.999996
+Ka 0.700000 0.700000 0.700000
+Kd 0.200000 0.175364 0.140000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump -bm 0.100000 -s 5.000000 5.000000 5.000000 E:\\Desktop_Files\\textures\\Metal_Textures\\Metal\\TexturesCom_Metal_SteelRough2_1K_normal.tif
+
+newmtl Collision
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Concrete
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.700000 -s 5.000000 5.000000 5.000000 E:\\Desktop_Files\\textures\\Concrete & Plasters\\Worn_Wall\\TexturesCom_Concrete_WornWall_1K_normal.tif
+
+newmtl ConcreteCrack
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.165680 0.126553 0.082210
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -s 5.000000 5.000000 5.000000 E:\\Desktop_Files\\textures\\Concrete & Plasters\\Worn_Wall\\TexturesCom_Concrete_WornWall_1K_normal.tif
+
+newmtl ConcreteTrim3
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.692727 0.692727 0.692727
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump -bm 0.500000 C:\\Users\\khatr\\Desktop\\Trim Sheets\\Third Trim Maps\\Trim Normal Map 2.jpg
+
+newmtl Light
+Ns 323.999994
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 2
+
+newmtl Metal
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Bump E:\\Desktop_Files\\textures\\Metal_Textures\\Metal\\TexturesCom_Metal_SteelRough2_1K_normal.tif
+map_Kd E:\\Desktop_Files\\textures\\Metal_Textures\\Metal\\TexturesCom_Metal_SteelRough2_1K_albedo.tif
+map_Ns E:\\Desktop_Files\\textures\\Metal_Textures\\Metal\\TexturesCom_Metal_SteelRough2_1K_roughness.tif
+
+newmtl None
+Ns 500
+Ka 0.8 0.8 0.8
+Kd 0.8 0.8 0.8
+Ks 0.8 0.8 0.8
+d 1
+illum 2
+
+newmtl Patterened_Bronze
+Ns 575.999996
+Ka 1.000000 1.000000 1.000000
+Kd 0.531989 0.322754 0.024906
+Ks 0.700000 0.700000 0.700000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 3
+
+newmtl Tile
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Trim_Concrete
+Ns 225.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump C:\\Users\\khatr\\Desktop\\Trim Sheets\\New Trim NOrmal\\Trim Normal Map.jpg
+
+newmtl Windows
+Ns 34.063138
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Wood_2
+Ns 34.063138
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Bump E:\\Desktop_Files\\textures\\WoodTextures\\Wood_MapleV\\TexturesCom_Wood_MapleVeneer_512_normal.tif
+
+newmtl defaultMat
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1

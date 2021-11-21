@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9aabb733b70d1d4448441c0f7c2b152d, type: 3}
+  m_Name: SwordsAudioProperties
+  m_EditorClassIdentifier: 
+  group_audioContainer:
+    audioGroups:
+    - code: Sword
+      audio_Array:
+      - code: Concrete
+        audioClip:
+        - {fileID: 8300000, guid: c16581ff0fbe2d2429deae0aabc1d8d9, type: 3}
+        - {fileID: 8300000, guid: f681c1a6679e20240bba841be9d47923, type: 3}
+        - {fileID: 8300000, guid: 83100c0f5c25b4345bebab2d21925bd8, type: 3}
+        - {fileID: 8300000, guid: 60cce6fc7352e4642890b4e3f6748044, type: 3}
+        - {fileID: 8300000, guid: 60d0e027d3f5f964c9874013594a9b03, type: 3}
+        - {fileID: 8300000, guid: 8906f71482caee648a342454d8f81a51, type: 3}
+        - {fileID: 8300000, guid: 639672b23aa14a8438b9698150e9bbcf, type: 3}
+      - code: Wood
+        audioClip:
+        - {fileID: 8300000, guid: 0d83a89d5a27c0c46b1b818af2ee5edd, type: 3}
+        - {fileID: 8300000, guid: 9a237a07a1047584f93ac8faeb4851b4, type: 3}
+        - {fileID: 8300000, guid: 68e0c847f79013c4183d7c5d5be26f6b, type: 3}
+      - code: Metal
+        audioClip:
+        - {fileID: 8300000, guid: 7a53d5c55fecf9d4d9068af8ba5cb159, type: 3}
+        - {fileID: 8300000, guid: b3ff902f923f8ff43be31de650ecedca, type: 3}
+        - {fileID: 8300000, guid: 0c9dc55afa18be0418eb10861b07d09c, type: 3}
+        - {fileID: 8300000, guid: d7c5f43a20112334086ebd1fd7801b8f, type: 3}
+        - {fileID: 8300000, guid: e0b7a84d256bc694c921cd5b548c1995, type: 3}
+      - code: Flesh
+        audioClip:
+        - {fileID: 8300000, guid: bf1bf43e0bd048e46a2e49d46af468e7, type: 3}
+        - {fileID: 8300000, guid: 542aa8bf1fa13cd40aa1e14357e3b338, type: 3}
+        - {fileID: 8300000, guid: 3d04ba68254dca8449a423ccafce8d6f, type: 3}
+        - {fileID: 8300000, guid: 354d068e61d90c140b547583499ba57c, type: 3}
+        - {fileID: 8300000, guid: 4d1a50a1509cc2d4f993e5c121f9f803, type: 3}
+    - code: Swoosh
+      audio_Array:
+      - code: Medium
+        audioClip:
+        - {fileID: 8300000, guid: 113b433788839864b9c557cfcdd2c761, type: 3}
+        - {fileID: 8300000, guid: 1f263b534b375b946bc71bdeadaf36d1, type: 3}
+      - code: Heavy
+        audioClip:
+        - {fileID: 8300000, guid: 8a4d64a2df10aa64abafe3c4f013d26e, type: 3}
+        - {fileID: 8300000, guid: 8a56516399aa6cd4589ab1881e796c65, type: 3}
+        - {fileID: 8300000, guid: a05be1cc458f9194b87b456e4b0d2af9, type: 3}
+        - {fileID: 8300000, guid: 42a3b5f119eb5b54d962ccd2179eedf8, type: 3}
+    - code: GroundClash
+      audio_Array:
+      - code: Light
+        audioClip:
+        - {fileID: 8300000, guid: d7c5f43a20112334086ebd1fd7801b8f, type: 3}
+      - code: Medium
+        audioClip:
+        - {fileID: 8300000, guid: e0b7a84d256bc694c921cd5b548c1995, type: 3}
+      - code: Heavy
+        audioClip:
+        - {fileID: 8300000, guid: 67cfc5971a5282d48bede56a7e12a1cd, type: 3}

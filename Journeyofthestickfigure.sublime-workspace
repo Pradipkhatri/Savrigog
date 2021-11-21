@@ -1,0 +1,230 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "ng System.Collections;\nusing System.Collections.Generic;\nusing UnityEngine;\n\npublic class ArrowProperty : MonoBehaviour\n{   \n\n    [System.Serializable] \n    public struct FakeArrowProperties{\n        public float waitTime;\n        public float followSpeed;\n        [Range(0, 1)] public float arrow_adjustment;\n\n        [HideInInspector] public Transform parentArrow;\n\n    }\n\n    [System.Serializable] \n    private class ShootArrowProperties{\n        public LayerMask collisionLayers;\n        public LayerMask enemyLayers;\n        public float arrowSpeed = 50;   \n        public float gravity = 0.05f; \n        public float fallTimer =0.2f;\n        public int damageRate = 20;\n        public float rayLength = 1f;\n        public float sphereCast_Size = 0.28f;\n        public AudioClip hitAudio;\n        public ParticleSystem brustParticle;\n        public ParticleSystem bloodParticle;\n        public GameObject arrowHole;\n    }\n\n    AudioSource audioSource;\n    bool collided = false;\n    bool hideArrow = false;\n\n    [SerializeField] bool fakeArrow;\n    [SerializeField] float destroyTime = 5;\n    public FakeArrowProperties fakeArrowProperties;\n    [SerializeField] ShootArrowProperties shootArrowProperties;\n\n    public float current_arrow_dist;\n\n    void Start(){\n        if(!fakeArrow) audioSource = GetComponent<AudioSource>();\n    }\n     void FixedUpdate()\n    {\n        if(fakeArrow){\n            FakeArrow();\n        }else{\n            ShootedArrow();\n        }\n\n        Destroy(this.gameObject, destroyTime);\n    }\n\n    private void FakeArrow(){\n        if(fakeArrowProperties.parentArrow != null){\n            if(fakeArrowProperties.waitTime > -1) fakeArrowProperties.waitTime -= Time.deltaTime;\n            if(fakeArrowProperties.waitTime < 0){\n                fakeArrowProperties.followSpeed = Mathf.Lerp(fakeArrowProperties.followSpeed, shootArrowProperties.arrowSpeed, Time.deltaTime * 4);\n                transform.position = Vector3.Lerp(transform.position, fakeArrowProperties.parentArrow.position, fakeArrowProperties.followSpeed * Time.deltaTime);\n                transform.rotation = Quaternion.Slerp(transform.rotation, fakeArrowProperties.parentArrow.rotation, Time.deltaTime * fakeArrowProperties.followSpeed);\n            }else{\n                transform.Translate(Vector3.forward * shootArrowProperties.arrowSpeed * Time.deltaTime);\n            }\n                \n            ArrowUpdates();\n        }else\n            return;\n    }\ntransform\n    private void ShootedArrow(){\n        \n        if(!collided){\n            Rayshoot();\n            GetComponent<MeshRenderer>().enabled = false;\n            transform.Translate(Vector3.forward * shootArrowProperties.arrowSpeed * Time.deltaTime);\n            if(shootArrowProperties.fallTimer > -1) shootArrowProperties.fallTimer -= Time.deltaTime;\n            if(shootArrowProperties.fallTimer < 0) transform.rotation = transform.rotation * Quaternion.Euler(shootArrowProperties.gravity,0,0);\n        }\n    }\n\n    void Rayshoot(){\n        RaycastHit hit;\n\n        Ray ray = new Ray(transform.position, transform.forward);\n\n        if(GameManager.gameManager.aimAssist){\n            if(Physics.SphereCast(transform.position, shootArrowProperties.sphereCast_Size, transform.forward, out hit, shootArrowProperties.rayLength, shootArrowProperties.enemyLayers)){\n                if(hit.transform.CompareTag(\"Enemy\") && !collided){\n                    FilterHitBody(hit);\n                }   \n                else if(hit.transform.CompareTag(\"Head\") && !collided){\n                    FilterHitHead(hit);\n                }else return;\n            } \n        }else{\n            if(Physics.Raycast(ray, out hit, shootArrowProperties.rayLength, shootArrowProperties.enemyLayers)){\n                if(hit.transform.CompareTag(\"Enemy\") && !collided) FilterHitBody(hit);\n                else if(hit.transform.CompareTag(\"Head\") && !collided) FilterHitHead(hit);\n                else return;\n            }\n        }      \n\n        if(Physics.Raycast(ray, out hit, shootArrowProperties.rayLength, shootArrowProperties.collisionLayers)){\n            if(!collided) {\n                audioSource.PlayOneShot(shootArrowProperties.hitAudio);\n                GameObject bulletHole = Instantiate(shootArrowProperties.arrowHole, hit.point - (transform.forward * 0.01f), Quaternion.LookRotation(-hit.normal));\n                bulletHole.transform.parent = hit.transform;\n                ParticleSystem brustPar = Instantiate(shootArrowProperties.brustParticle, hit.point, Quaternion.LookRotation(-transform.forward));\n                brustPar.transform.parent = hit.transform;\n                transform.parent = hit.transform;\n            }\n            transform.position = hit.point;\n            Transform player = GameObject.FindGameObjectWithTag(\"Player\").transform;\n            current_arrow_dist = Vector3.Distance(player.position, hit.point);\n            hideArrow = false;\n            collided = true;\n        }\n        \n    }\n\n    private void FilterHitBody(RaycastHit hit){\n        IDamageable damageable = hit.transform.GetComponent<IDamageable>();\n        if(damageable == null) return;\n        damageable.TakeDamage (2 , shootArrowProperties.damageRate, false);\n        ParticleSystem brustPar = Instantiate(shootArrowProperties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));\n        hideArrow = true;\n        collided = true;\n    }\n\n    private void FilterHitHead(RaycastHit hit){\n         EnemyHeadShot enemyHeadShot = hit.transform.GetComponent<EnemyHeadShot>();\n        enemyHeadShot.TakenDamage(shootArrowProperties.damageRate);\n        if(enemyHeadShot.perfectHeadShot) Instantiate(shootArrowProperties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));\n        hideArrow = true;\n        collided = true;\n    }\n\n\n    \n    void ArrowUpdates()\n    {\n        ArrowProperty parentProperty = fakeArrowProperties.parentArrow.GetComponent<ArrowProperty>();\n        if(!parentProperty) return;\n\n        if(parentProperty.hideArrow){\n            Destroy(this.gameObject);\n            return;\n        }\n\n        if(parentProperty.collided){\n            current_arrow_dist = fakeArrowProperties.parentArrow.GetComponent<ArrowProperty>().current_arrow_dist;\n            float force = current_arrow_dist / 20;\n            force = Mathf.Clamp(force, 0.4f, 1);\n            transform.position = fakeArrowProperties.parentArrow.position - (transform.forward * force);\n        }\n    }\n\n    void OnDrawGizmosSelected(){\n        Gizmos.color = Color.blue;\n        Gizmos.DrawWireSphere(transform.position + transform.forward * shootArrowProperties.rayLength, shootArrowProperties.sphereCast_Size);\n        Gizmos.DrawRay(transform.position, transform.forward * shootArrowProperties.rayLength);\n    }\n}\n",
+			"file": "Assets/Scripts/ItemsProperties/ArrowProperty.cs",
+			"file_size": 6954,
+			"file_write_time": 132762421483348655,
+			"settings":
+			{
+				"buffer_size": 6792,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"package install",
+				"Package Control: Install Package"
+			],
+			[
+				"Install ",
+				"Install Package Control"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/Unity-Projects/Journey Of StickFigure/Assets/Scripts",
+		"/D/Unity-Projects/Journey Of StickFigure/Assets/Scripts/Enemy_Attributes"
+	],
+	"file_history":
+	[
+		"/D/Unity-Projects/Journey Of StickFigure/",
+		"/D/Unity-Projects/Journey Of StickFigure/Journeyofthestickfigure.sublime-project",
+		"/D/Unity-Projects/Journey Of StickFigure/Journeyofstickfigure"
+	],
+	"find":
+	{
+		"height": 0.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Assets/Scripts/ItemsProperties/ArrowProperty.cs",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6792,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2466,
+								2466
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/C#/C#.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1188.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.variable_get":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Journeyofthestickfigure.sublime-project",
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 382.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
