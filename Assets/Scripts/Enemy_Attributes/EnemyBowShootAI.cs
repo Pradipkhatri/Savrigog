@@ -49,8 +49,10 @@ public class EnemyBowShootAI : MonoBehaviour {
 
     private void Update()
     {
-        if(!enemyHealthManager || !_player || !anim) return;
+        if(!enemyHealthManager || !_player || !anim || !navMesh.enabled || enemyHealthManager.justSpwaned) return;
+
         enemyHealthManager.ArtificialUpdate();
+
         if(!enemyHealthManager.isAlive) return;
 
         detectRange.x = Vector3.Distance(transform.position, _player.position);
@@ -71,20 +73,38 @@ public class EnemyBowShootAI : MonoBehaviour {
 
         if(detectRange.x < detectRange.z){
             if(detectRange.x < (detectRange.y - 2 )) {
-                if(!enemyHealthManager.isHurt) MaintainDistance();
+                if(!enemyHealthManager.isHurt && attackTime.x > 0){
+                    if(MaintainDistance()) MoveBack(); else BattleCondition();
+                } 
             }else{
                     BattleCondition();  
             }
         }else Idle();
     }
 
-    private void MaintainDistance(){	
+    private bool MaintainDistance(){	
+
         PlayerLookAt();
+
+       	NavMeshHit hit;
+
+        Vector3 backPos = _player.position - (transform.forward * detectRange.y);
+		bool isvalid = NavMesh.SamplePosition(backPos, out hit, .1f, NavMesh.AllAreas);
+
+        if(isvalid){
+            return true;
+        }else {
+            anim.SetFloat("Movement", 0, 0.1f, Time.deltaTime);
+            return false;
+        }
+    }
+
+    void MoveBack(){
+        attackTime.x -= Time.deltaTime;
         anim.SetBool("Aim", false);
         navMesh.updateRotation = false;
         navMesh.SetDestination(_player.position + (-transform.forward * detectRange.y));
 		anim.SetFloat("Movement", -1, 0.1f, Time.deltaTime);
-        
     }
 
     private void PlayerLookAt(){

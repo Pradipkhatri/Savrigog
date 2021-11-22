@@ -73,7 +73,7 @@ public class EnemyAIUpdate : MonoBehaviour {
 
 
 	void Update () {
-		if(!enemyManager) return;
+		if(!enemyManager || !navMesh.enabled || enemyManager.justSpwaned) return;
 
 		enemyManager.ArtificialUpdate();
 		if(!enemyManager.isAlive){
@@ -313,7 +313,7 @@ public class EnemyAIUpdate : MonoBehaviour {
 
 	private bool PlayerDetector (){
 
-		if(range_calc.x > range_calc.y) return false;
+		//if(range_calc.x > range_calc.y) return false;
 
 		navMesh.CalculatePath(target.position, path);
 		RaycastHit hit;
@@ -331,7 +331,7 @@ public class EnemyAIUpdate : MonoBehaviour {
 	}
 
 	void OnDrawGizmos(){
-		Gizmos.DrawWireSphere(transform.position, range_calc.y);
+		//Gizmos.DrawWireSphere(transform.position, range_calc.y);
 		Gizmos.color = Color.red;
 		Gizmos.DrawWireSphere(transform.position + ((Vector3.up * damageRange.y) +  (transform.forward * damageRange.x)), damageRange.z);
 	}

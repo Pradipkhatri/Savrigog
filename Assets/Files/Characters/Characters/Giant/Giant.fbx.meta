@@ -233,7 +233,7 @@ ModelImporter:
         intParameter: 5
         messageOptions: 0
       - time: 0.49985087
-        functionName: SwordGroundContact
+        functionName: GroundSmash
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
@@ -575,20 +575,6 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.40716615
-        functionName: DamagePoint
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 2
-        messageOptions: 0
-      - time: 0.61465913
-        functionName: DamagePoint
-        data: 
-        objectReferenceParameter: {instanceID: 0}
-        floatParameter: 0
-        intParameter: 5
-        messageOptions: 0
       - time: 0.09055771
         functionName: GiantFoot
         data: 
@@ -610,6 +596,13 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
+      - time: 0.40716615
+        functionName: DamagePoint
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 2
+        messageOptions: 0
       - time: 0.43843448
         functionName: TrailEnd
         data: 
@@ -624,12 +617,19 @@ ModelImporter:
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.64376295
-        functionName: SwordGroundContact
+      - time: 0.60313797
+        functionName: GroundSmash
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
+        messageOptions: 0
+      - time: 0.61465913
+        functionName: DamagePoint
+        data: 
+        objectReferenceParameter: {instanceID: 0}
+        floatParameter: 0
+        intParameter: 5
         messageOptions: 0
       transformMask: []
       maskType: 3

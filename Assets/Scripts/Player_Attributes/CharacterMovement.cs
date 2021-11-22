@@ -169,7 +169,7 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	private void OtherAction(){
-		
+		anim.SetFloat("MovementSpeed", 0);
 	}
 
 	private void MovementAvailable(){

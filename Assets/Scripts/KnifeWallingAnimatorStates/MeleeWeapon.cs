@@ -21,6 +21,12 @@ public class MeleeWeapon : MonoBehaviour
 	public string swooshAudio = "Medium";
 	public string weapon_type = "Sword";
 
+	void OnEnable(){
+		if(glowAble){
+			swordMaterial.SetColor ("_EmissionColor", glowColor);
+		}
+	}
+
 	public void ArtificialUpdate(){
 		if(recoverTime > 0) recoverTime -= Time.deltaTime;
 		if(PlayerManager.Instance.damageEnabled && !PlayerManager.Instance.isDead){
@@ -87,7 +93,7 @@ public class MeleeWeapon : MonoBehaviour
 		if(recoverTime <= 0){
 			if(stuckCount > 0) {
 				PlayerManager.Instance.swordStuck = true;
-				GameManager.gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one);
+				GameManager.gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one * 2);
 				stuckCount -= 1;
 			}
 		}

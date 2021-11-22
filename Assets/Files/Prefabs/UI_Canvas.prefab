@@ -698,7 +698,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -152}
+  m_AnchoredPosition: {x: 145.00003, y: -152}
   m_SizeDelta: {x: -273.73938, y: 33.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &3539767280664734626
@@ -1311,7 +1311,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 21.25, y: 66.37504}
+  m_AnchoredPosition: {x: 21.25, y: 66.37503}
   m_SizeDelta: {x: -273.73938, y: -326.51965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1925311855151238527
@@ -1537,8 +1537,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6919606234840051023, guid: 64816efc628107248b29c2a9203819ff,
-          type: 3}
+      - m_Target: {fileID: 0}
         m_MethodName: GameVolume
         m_Mode: 0
         m_Arguments:
@@ -1635,8 +1634,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6919606234840051023, guid: 64816efc628107248b29c2a9203819ff,
-          type: 3}
+      - m_Target: {fileID: 0}
         m_MethodName: MusicVolume
         m_Mode: 0
         m_Arguments:
@@ -1760,9 +1758,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '2
-
-'
+  m_Text: 2
 --- !u!1 &7527121095453559136
 GameObject:
   m_ObjectHideFlags: 0
@@ -1797,7 +1793,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -193.00024, y: 55.500008}
+  m_AnchoredPosition: {x: -193.00024, y: 55.5}
   m_SizeDelta: {x: -331.93433, y: -342.73965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7527121095453559141
@@ -3418,7 +3414,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 10
+  m_Text: 50
 --- !u!1 &7527121095919475056
 GameObject:
   m_ObjectHideFlags: 0
@@ -4977,7 +4973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 0.5}
-  m_AnchoredPosition: {x: 145, y: -322.19998}
+  m_AnchoredPosition: {x: 145.00003, y: -322.19998}
   m_SizeDelta: {x: -273.73938, y: 33.22}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7527121096177818515
@@ -5395,8 +5391,7 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6919606234840051023, guid: 64816efc628107248b29c2a9203819ff,
-          type: 3}
+      - m_Target: {fileID: 0}
         m_MethodName: VoiceVolume
         m_Mode: 0
         m_Arguments:
@@ -10422,7 +10417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.75, y: 66.37501}
+  m_AnchoredPosition: {x: -1.75, y: 66.375}
   m_SizeDelta: {x: -273.73938, y: -326.51965}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &7527121097442102185
@@ -10714,7 +10709,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 1
+  m_FillAmount: 0.8
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0

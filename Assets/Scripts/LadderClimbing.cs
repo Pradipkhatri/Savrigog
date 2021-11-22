@@ -146,13 +146,15 @@ public class LadderClimbing : MonoBehaviour {
 		}
 
 	}
+	
 	private void UnMountProcess(){
 			climbingLadder = false;
 			this.transform.parent = null;
 			anim.SetBool("ClimbingLadder", false);
 			timeEstimated = 0;
 	}
-	public void Climbed(){
+
+	public void ClimbEnd(){
 		climbingUp = false;
 		UnMountProcess();
 		anim.SetBool("LadderExit", false);

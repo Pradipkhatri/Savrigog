@@ -7,6 +7,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	bool scorePass = true;
 
 	public bool no_hurtPlay = false;
+	[SerializeField] bool knock_back_enabled = true;
 	[SerializeField] [Range(0, 1)] float play_hurt = 1;
 	[SerializeField] GameObject playerAvoider;
 	[SerializeField] bool bowEnemy = false;
@@ -62,24 +63,48 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	float recoverTime = 0f;
 	[SerializeField] float max_recoverTime = 0.1f;
 
-	[SerializeField] AudioClip hurt_audio;
+	[SerializeField] string audio_onSword_Contact;
 
-	void Start () {
-		PlayerManager.OnSmashed += Smashed;
+	public bool justSpwaned = false;
+
+	void Start(){
 		navMesh = GetComponent<UnityEngine.AI.NavMeshAgent>();
 		anim = GetComponent<Animator>();
 		enemyBowShootAI = GetComponent<EnemyBowShootAI>();
-		
-		blockProperties.shieldLevel = blockProperties.max_shieldLevel;
 		enemy_audioSource = GetComponent<AudioSource>();
-		currentHealth = MaxHealth;
-		if(bloodParticle) bloodParticle.Play(false);
 		if(!bowEnemy) enemyAI = GetComponent<EnemyAIUpdate> ();
 		target = PlayerManager.Instance.player.transform;
 	}
-	
+	void OnEnable () {
+		justSpwaned = true;
+		navMesh.enabled = false;
+		anim.SetBool("IsDead", false);
+
+		StartCoroutine(ReadyAfterSpwan());
+
+		PlayerManager.OnSmashed += Smashed;
+		blockProperties.shieldLevel = blockProperties.max_shieldLevel;
+		currentHealth = MaxHealth;
+		if(enemy_ui_canvas != null) enemy_ui_canvas.SetActive(false);
+		if(playerAvoider != null) playerAvoider.SetActive(true);
+		this.GetComponent<CapsuleCollider>().enabled = true;
+	}
+
+	IEnumerator ReadyAfterSpwan(){
+		yield return new WaitForSeconds(1);
+		navMesh.enabled = true;
+
+		yield return new WaitForSeconds(2);
+		if(enemy_ui_canvas != null) enemy_ui_canvas.SetActive(true);
+		if(healthFill != null) healthFill.fillAmount = 1;
+		if(defenceFill != null) defenceFill.fillAmount = 1;
+
+		justSpwaned = false;
+	}
 	
 	public void ArtificialUpdate(){
+
+		if(!navMesh.enabled || justSpwaned) return;
 
 		if(enemy_ui_canvas != null) enemy_ui_canvas.transform.LookAt(PlayerManager.Instance.mainCamera.transform);
 
@@ -117,7 +142,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 		if(recoverTime > 0) return;
 		recoverTime = max_recoverTime;
 		
-		navMesh.velocity = -transform.forward * knockBack;
+		if(knock_back_enabled) navMesh.velocity = -transform.forward * knockBack;
 		PlayArmor("Action");
 
 		if(enemyAI != null){ 
@@ -169,13 +194,14 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 			anim.SetFloat("HitType", DamageType);
 			//if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt")) 
 			anim.SetTrigger("Hurt");
+			if(knock_back_enabled) navMesh.velocity = -transform.forward * knockBack;
 		}
 	}
 	private void NotBlockingState(int Damage, int DamageType, bool SwordContact){
 		isHurt = true;
 		if(SwordContact) {
 			if(armor_type != "") AudioCaller.MultiGroupAudioPlay(null, enemy_audioSource, armor_type, "Action");
-			AudioCaller.MultiGroupAudioPlay(PlayerManager.Instance.swordAudios, null, PlayerManager.Instance.current_weapon_type, PlayerActions.wallType);
+			//AudioCaller.MultiGroupAudioPlay(PlayerManager.Instance.swordAudios, null, PlayerManager.Instance.current_weapon_type, PlayerActions.wallType);
 		}
 		FilterDamage(Damage, 0, DamageType, SwordContact);
 		
@@ -196,7 +222,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 		if(healthFill != null) healthFill.fillAmount = currentHealth / MaxHealth;
 		if(defenceFill != null) defenceFill.fillAmount = defenceLevel / maxDefenceLevel;
 		if(bloodParticle && SwordContact) bloodParticle.Play (true);
-		if(hurt_audio != null) AudioCaller.PlaySound(enemy_audioSource, hurt_audio);
+		AudioCaller.MultiGroupAudioPlay(PlayerManager.Instance.swordAudios, enemy_audioSource, PlayerManager.Instance.current_weapon_type, audio_onSword_Contact);
 		FilterBar();
 
 	}
@@ -227,26 +253,32 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	private void Death(){
 		
 
-		navMesh.enabled = false;
-		if(enemy_ui_canvas != null) Destroy(enemy_ui_canvas);
-		if(playerAvoider != null) playerAvoider.SetActive(false);
 		PlayerManager.OnSmashed -= Smashed;
+
+		navMesh.enabled = false;
+		if(enemy_ui_canvas != null) enemy_ui_canvas.SetActive(false);
+		if(playerAvoider != null) playerAvoider.SetActive(false);
 		this.GetComponent<CapsuleCollider>().enabled = false;
+		anim.SetLayerWeight (1, 0);
+		anim.SetBool("IsDead", true);
+
 		if(scorePass == true){
-				
 				EnemySpwan enemySpwan = gameObject.GetComponentInParent<EnemySpwan>();
 				if(enemySpwan != null) enemySpwan.CheckRemainingEnemies();
 
-				bool spwanObject = Random.value > 0.5f;
+				bool spwanObject = Random.value > 0.8f;
 				
 				if(spwanObject) Instantiate(GameManager.gameManager.enemy_itemSpwans[Random.Range(0, GameManager.gameManager.enemy_itemSpwans.Count)] ,transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
 				PlayerManager.Instance.scoreStore += 1.3f;
 				transform.SetParent(null);
 				scorePass = false;
 		}
-		anim.SetLayerWeight (1, 0);
-		anim.SetBool("IsDead", true);
-		Destroy(this.gameObject, 5);
+		
+		Invoke("ResetEnemy", 3);
+	}
+
+	void ResetEnemy(){
+		this.gameObject.SetActive(false);
 	}
 
 	private void BodyDrop(){

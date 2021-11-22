@@ -7613,6 +7613,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   no_hurtPlay: 0
+  knock_back_enabled: 1
   play_hurt: 1
   playerAvoider: {fileID: 0}
   bowEnemy: 0
@@ -7644,7 +7645,7 @@ MonoBehaviour:
   enemy_audioSource: {fileID: 0}
   armor_type: 
   max_recoverTime: 0.1
-  hurt_audio: {fileID: 8300000, guid: bf1bf43e0bd048e46a2e49d46af468e7, type: 3}
+  audio_onSword_Contact: Flesh
 --- !u!82 &1490052109326000841
 AudioSource:
   m_ObjectHideFlags: 0

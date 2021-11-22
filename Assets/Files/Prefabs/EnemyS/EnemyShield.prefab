@@ -306,6 +306,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   no_hurtPlay: 0
+  knock_back_enabled: 1
   play_hurt: 1
   playerAvoider: {fileID: 1319060341861578337}
   bowEnemy: 0
@@ -327,7 +328,7 @@ MonoBehaviour:
     isBlocking: 0
     shieldLevel: 50
     max_shieldLevel: 50
-    blockPriority: 0.7
+    blockPriority: 1
   isAlive: 1
   isHurt: 0
   bloodParticle: {fileID: 8817626619841010121}
@@ -337,7 +338,7 @@ MonoBehaviour:
   enemy_audioSource: {fileID: 1319060340804401144}
   armor_type: 
   max_recoverTime: 0.1
-  hurt_audio: {fileID: 8300000, guid: bf1bf43e0bd048e46a2e49d46af468e7, type: 3}
+  audio_onSword_Contact: Flesh
 --- !u!82 &1319060340804401144
 AudioSource:
   m_ObjectHideFlags: 0

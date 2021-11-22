@@ -285,7 +285,7 @@ Material:
     - _BaseColorMap_MipInfo: {r: 0, g: 0, b: 0, a: 0}
     - _Color: {r: 0.8679245, g: 0.7582769, b: 0.55268776, a: 1}
     - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
-    - _EmissionColor: {r: 9.245538e-34, g: 9.054693e-34, b: 4.491941e-34, a: 1}
+    - _EmissionColor: {r: 1, g: 0.97935975, b: 0.48584908, a: 1}
     - _EmissionColorUI: {r: 0.89705884, g: 0.6308525, b: 0.38916522, a: 1}
     - _EmissiveColor: {r: 0, g: 0, b: 0, a: 1}
     - _InvPrimScale: {r: 1, g: 1, b: 0, a: 0}

@@ -12,6 +12,8 @@ public class EnemyGiant : MonoBehaviour
 
     [SerializeField] AudioClip sword_clash_audio;
 
+    [SerializeField] ParticleSystem groundSmash_Particle;
+
     int prev_random = 0;
     private void Start()
     {
@@ -43,5 +45,11 @@ public class EnemyGiant : MonoBehaviour
             prev_random = random;
             return random;
         }
+    }
+
+    private void GroundSmash(){
+        groundSmash_Particle.Play();
+        GameManager.gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one * 4);
+        AudioCaller.SingleGroupAudioPlay(null, enemyAI.enemyAudioSource, "GroundSmash");
     }
 }

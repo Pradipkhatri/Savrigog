@@ -1,6 +1,5 @@
 ﻿using UnityEngine;
 using System.Collections;
-using AdvCameraShake;
 using System.Collections.Generic;
 
 public class PlayerAttack : MonoBehaviour {
@@ -39,6 +38,9 @@ public class PlayerAttack : MonoBehaviour {
 
 	AudioSource secoandary_audioSource;
 
+	bool at_tracker = false;
+	bool weaponChanged = false;
+
 	void Start() {
 		anim = PlayerManager.Instance.anim;
 		secoandary_audioSource = GameManager.gameManager.secoandary_audioSource;
@@ -54,6 +56,7 @@ public class PlayerAttack : MonoBehaviour {
 		selected_swordID++;
 
 		if(selected_swordID > totalWeapons) selected_swordID = 0;
+
 		
 		idleSword = rightHandedWeapons [selected_swordID].idleSword;
 		handSword = rightHandedWeapons [selected_swordID].handSword;
@@ -61,6 +64,9 @@ public class PlayerAttack : MonoBehaviour {
 		PlayerManager.Instance.current_weapon_type = current_swordProperties.meleeWeapon.weapon_type;
 		PlayerManager.Instance.RHS_weapon_Level = current_swordProperties.weaponLevel;
 		if(current_swordProperties != null) swordTrail = current_swordProperties.meleeWeapon.sword_trail;
+
+		weaponChanged = true;
+		if(current_swordProperties.meleeWeapon.glowAble) WeaponGlow();
 	}
 		
 	void SwordActivator()
@@ -87,14 +93,12 @@ public class PlayerAttack : MonoBehaviour {
 	}
 	
 	void WeaponGlow(){
-			
-		if (PlayerActions.isAttacking) {
-			current_swordProperties.meleeWeapon.swordMaterial.SetColor ("_EmissionColor", current_swordProperties.meleeWeapon.glowColor);
-		} else {
-			Color newColor = Color.Lerp (current_swordProperties.meleeWeapon.swordMaterial.GetColor("_EmissionColor"), new Color(0,0,0), 2 * Time.deltaTime);
-			current_swordProperties.meleeWeapon.swordMaterial.SetColor ("_EmissionColor", newColor);
+		StopCoroutine("WeaponUnGlow");
+		current_swordProperties.meleeWeapon.swordMaterial.SetColor ("_EmissionColor", current_swordProperties.meleeWeapon.glowColor);
+		if(weaponChanged) {
+			StartCoroutine(WeaponUnGlow(0.4f));
+			weaponChanged = false;
 		}
-
 	}
 
 	private void EnemyTarget(){
@@ -120,7 +124,6 @@ public class PlayerAttack : MonoBehaviour {
 
 		
 		if (Input.GetButtonDown ("Fire1")) {
-
 			if(PlayerManager.Instance.currentStamina > 10){
 				attackTimer = maxattackTimer;
 				anim.SetBool ("Attack", true);
@@ -146,6 +149,9 @@ public class PlayerAttack : MonoBehaviour {
 
 		if (attackTimer > 0 && PlayerActions.isGrounded) { 
 			//Attacking
+			current_swordProperties.meleeWeapon.ArtificialUpdate();
+			at_tracker = true;
+			if(current_swordProperties.meleeWeapon.glowAble) WeaponGlow ();
 		}else{
 			attackTimer = 0;
 			anim.SetBool("Attack", false);
@@ -156,8 +162,7 @@ public class PlayerAttack : MonoBehaviour {
 		if (attackTimer > maxattackTimer) 
 			attackTimer = maxattackTimer;
 
-		if(current_swordProperties.meleeWeapon.glowAble) WeaponGlow ();
-		current_swordProperties.meleeWeapon.ArtificialUpdate();
+		
 
 		attackTimer -= Time.deltaTime;
 	}
@@ -181,11 +186,27 @@ public class PlayerAttack : MonoBehaviour {
 	}
 	
 	void StopAttacking() {
-		attackTimer = 0;
-		anim.SetBool("Attack", false);
-		anim.SetBool ("HeavyAttack", false);
-		if(damageEnabled) damageEnabled = false;
-		if(swordTrail != null) swordTrail.SetActive (false);
+		if(at_tracker) {
+			StartCoroutine(WeaponUnGlow(0.8f));
+			attackTimer = 0;
+			anim.SetBool("Attack", false);
+			anim.SetBool ("HeavyAttack", false);
+			if(damageEnabled) damageEnabled = false;
+			if(swordTrail != null) swordTrail.SetActive (false);
+			at_tracker = false;
+		}else return;
+	}
+
+	IEnumerator WeaponUnGlow(float timer){
+		Material sm = current_swordProperties.meleeWeapon.swordMaterial;
+	
+		yield return new WaitForSeconds(timer);
+		Color c = new Color(0, 0, 0);
+		while(sm.GetColor("_EmissionColor") != c && sm != null){
+			Color newColor = Color.Lerp (sm.GetColor("_EmissionColor"), c, 2 * Time.deltaTime);
+			sm.SetColor ("_EmissionColor", newColor);
+			yield return null;
+		}
 	}
 
 	void TrailStart(){

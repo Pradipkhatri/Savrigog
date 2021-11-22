@@ -79,7 +79,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00014746189, y: -0.13569069, z: 0.069423676}
+    m_Center: {x: 0.00014781952, y: -0.13569164, z: 0.06942177}
     m_Extent: {x: 0.046031997, y: 0.15322033, z: 0.14456414}
   m_DirtyAABB: 0
 --- !u!183 &818326078926575977
@@ -310,7 +310,7 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.0001475811, y: -0.13569069, z: 0.06942177}
+    m_Center: {x: 0.00014734268, y: -0.1356926, z: 0.069423676}
     m_Extent: {x: 0.047395594, y: 0.15338013, z: 0.14539912}
   m_DirtyAABB: 0
 --- !u!183 &818326079501684631
@@ -541,8 +541,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00014686584, y: -0.1356914, z: 0.06942302}
-    m_Extent: {x: 0.027397163, y: 0.12618539, z: 0.046176955}
+    m_Center: {x: 0.00014686584, y: -0.1356914, z: 0.06942272}
+    m_Extent: {x: 0.027397163, y: 0.12618539, z: 0.046177074}
   m_DirtyAABB: 0
 --- !u!183 &818326079508310514
 Cloth:
@@ -999,8 +999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   aimHight: 1
-  detectRange: {x: 0, y: 7, z: 40}
-  attackTime: {x: 0, y: 10, z: -2}
+  detectRange: {x: 0, y: 5, z: 40}
+  attackTime: {x: 0, y: 10, z: -4}
   releaseTime: -2
   rotationSpeed: 8
   lookOffset: {x: 0, y: 70, z: 0}
@@ -1025,6 +1025,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   no_hurtPlay: 0
+  knock_back_enabled: 1
   play_hurt: 1
   playerAvoider: {fileID: 3736879840944933113}
   bowEnemy: 1
@@ -1056,7 +1057,7 @@ MonoBehaviour:
   enemy_audioSource: {fileID: 3736879841759479181}
   armor_type: 
   max_recoverTime: 0.1
-  hurt_audio: {fileID: 8300000, guid: bf1bf43e0bd048e46a2e49d46af468e7, type: 3}
+  audio_onSword_Contact: Flesh
 --- !u!82 &3736879841759479181
 AudioSource:
   m_ObjectHideFlags: 0
@@ -2441,8 +2442,8 @@ SkinnedMeshRenderer:
   m_BlendShapeWeights: []
   m_RootBone: {fileID: 0}
   m_AABB:
-    m_Center: {x: 0.00014686584, y: -0.13569164, z: 0.06942284}
-    m_Extent: {x: 0.027397163, y: 0.12618539, z: 0.046176955}
+    m_Center: {x: 0.00014686584, y: -0.1356914, z: 0.0694232}
+    m_Extent: {x: 0.027397163, y: 0.12618539, z: 0.046177074}
   m_DirtyAABB: 0
 --- !u!183 &3736879841770584837
 Cloth:

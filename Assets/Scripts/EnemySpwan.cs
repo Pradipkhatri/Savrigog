@@ -10,11 +10,13 @@ public class EnemySpwan : MonoBehaviour {
 		public Vector2Int[] enemyProperty;
 	}
 
+	private EnemySpwanManager enemySpwanManager;
+
 	[SerializeField] AudioClip wave_start_audio;
 	[SerializeField] AudioClip war_start_audio;
 	AudioSource music_Source;
 	[SerializeField] Vector2 generateArea = new Vector2(3, 3);
-	[SerializeField] GameObject[] toSpwan;
+	[SerializeField] string[] enemyNames;
 	
 	[Header("Enemy_Num, Count")]
 	[SerializeField] WaveProperty[] waveProperties;
@@ -23,6 +25,7 @@ public class EnemySpwan : MonoBehaviour {
 	GameObject trigger;
 	int waves_remain;
 	public void SpwannerTriggered(GameObject t){
+		enemySpwanManager = EnemySpwanManager.Instance;
 		music_Source = GameManager.gameManager.music_Source;
 		music_Source.clip = war_start_audio;
 		music_Source.Play();
@@ -61,7 +64,8 @@ public class EnemySpwan : MonoBehaviour {
 		for(int i = 0; i < waveProperties[currentWave].enemyProperty.Length; i++){
 			int enemy_num = waveProperties[currentWave].enemyProperty[i].x;
 			for(int a = 0; a < waveProperties[currentWave].enemyProperty[i].y; a++) {
-				SpwanEnemy(enemy_num);
+				string choosenEnemy = enemyNames[enemy_num];
+				SpwanEnemy(choosenEnemy);
 				yield return new WaitForSeconds(2);
 			}
 		}
@@ -69,11 +73,11 @@ public class EnemySpwan : MonoBehaviour {
 	}
 		
 
-	void SpwanEnemy(int enemy_num){
+	void SpwanEnemy(string enemyName){
 		float newPosX = transform.position.x + Random.Range(-generateArea.x / 2, generateArea.x / 2);
 		float newPosZ = transform.position.z + Random.Range(-generateArea.y / 2, generateArea.y / 2);
-		GameObject enemy = Instantiate(toSpwan[enemy_num], new Vector3(newPosX, transform.position.y, newPosZ), Quaternion.identity);
-		enemy.transform.SetParent(this.gameObject.transform);
+		GameObject enemy = enemySpwanManager.SpwanFromPool(enemyName, new Vector3(newPosX, transform.position.y, newPosZ), Quaternion.identity);
+		if(enemy != null) enemy.transform.SetParent(this.gameObject.transform); else CheckRemainingEnemies();
 		return;
 	}
 

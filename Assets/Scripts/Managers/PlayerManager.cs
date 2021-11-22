@@ -25,6 +25,7 @@ public class PlayerManager : MonoBehaviour {
 	}
 	
 	[SerializeField] Rect refField = new Rect(0,0,100,100);
+	GameManager gameManager;
 
 	#region ParticleSystemProperties
 	[System.Serializable]
@@ -108,6 +109,11 @@ public class PlayerManager : MonoBehaviour {
 		mainCamera = Camera.main.transform;
 	}
 
+	void Start(){
+		gameManager = GameManager.gameManager;
+
+	}
+
 	public void Smashed(){
 		if(OnSmashed != null) OnSmashed(currentDamageRate);
 	}
@@ -124,7 +130,7 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	void Update(){
-		if(isDead || GameManager.gameManager.isPaused){
+		if(isDead || gameManager.isPaused){
 			cc.Move(Vector3.up * cm.velocityY);
 			return;
 		}
@@ -134,7 +140,7 @@ public class PlayerManager : MonoBehaviour {
 
     //[System.Obsolete]
     void FixedUpdate(){		
-			if(isDead || GameManager.gameManager.isPaused) {
+			if(isDead || gameManager.isPaused) {
 				cc.Move(Vector3.up * cm.velocityY);
 				return;
 			}
@@ -149,11 +155,11 @@ public class PlayerManager : MonoBehaviour {
 			if(adv_groundChecker) adv_groundChecker.ArtificialUpdate();
 
 			if(PlayerActions.objectPushing){
-				GameManager.gameManager.cams[2].priority = 15;
+				gameManager.cams[2].priority = 15;
 				ObjectPushMech obm = GetComponent<ObjectPushMech>();
 				obm.GrabControl();
 			}else{
-				GameManager.gameManager.cams[2].priority = 5;
+				gameManager.cams[2].priority = 5;
 			}
 
 			if(Input.GetKeyDown(KeyCode.Y)){
@@ -211,7 +217,7 @@ public class PlayerManager : MonoBehaviour {
 	public void TakeDamage(float Damage, int damageType, Transform target){
 		if(isDead || PlayerActions.isDouging) return;
 		anim.SetFloat("HurtType", 0);
-		GameManager.gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one);
+		gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one * 3);
 
 
 		if(!PlayerActions.Busy && !PlayerActions.objectPushing && !PlayerActions.Acrobatis() && damageType < 7){
@@ -234,7 +240,7 @@ public class PlayerManager : MonoBehaviour {
 				currentStamina -= (damageType * 10) - (deduct_Stamind * current_Shield_Property.shield_Level);
 			}else{
 				anim.SetFloat("HurtRate", 4);
-				GameManager.gameManager.StartCoroutine(GameManager.gameManager.SlowMotionTrigger(2f));
+				gameManager.StartCoroutine(gameManager.SlowMotionTrigger(2f));
 				isBlocking = false;
 				currentStamina -= damageType * 10;
 				AudioCaller.MultiGroupAudioPlay(mainAudios, null, "BlockBreak", current_Shield_Property.shield_Mat);
