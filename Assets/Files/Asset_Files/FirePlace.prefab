@@ -23649,9 +23649,9 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8424898274392481748}
-  m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 3.0863917, y: 11.6080065, z: 58.381}
-  m_LocalScale: {x: 0.9360075, y: 0.93600893, z: 0.93600893}
+  m_LocalScale: {x: 0.9360075, y: 0.9360094, z: 0.9360094}
   m_Children:
   - {fileID: 8424898274392048630}
   m_Father: {fileID: 0}
@@ -23724,7 +23724,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 35
+  MaxDistance: 70
   Pan2D: 0
   rolloffMode: 2
   BypassEffects: 0
@@ -24239,7 +24239,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 65
   m_IsActive: 1
 --- !u!4 &8424898274501512150
 Transform:
@@ -24265,7 +24265,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 0.72848016, b: 0.4198113, a: 1}
+  m_Color: {r: 1, g: 0.80400556, b: 0.48584908, a: 1}
   m_Intensity: 2
   m_Range: 15
   m_SpotAngle: 30
@@ -24289,7 +24289,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 3416
+  m_ColorTemperature: 2858
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0

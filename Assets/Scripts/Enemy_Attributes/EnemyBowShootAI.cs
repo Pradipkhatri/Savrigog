@@ -63,6 +63,9 @@ public class EnemyBowShootAI : MonoBehaviour {
             aiming = false;
         }
 
+        PlayerLookAt();
+
+
         if(enemyHealthManager.isHurt){
             anim.SetLayerWeight(1, Mathf.Lerp(anim.GetLayerWeight(1), 0, 8 * Time.deltaTime));
             attackTime.x = Random.Range(1, attackTime.y);
@@ -84,7 +87,6 @@ public class EnemyBowShootAI : MonoBehaviour {
 
     private bool MaintainDistance(){	
 
-        PlayerLookAt();
 
        	NavMeshHit hit;
 
@@ -146,7 +148,6 @@ public class EnemyBowShootAI : MonoBehaviour {
         attackTime.x -= Time.deltaTime;
         navMesh.updateRotation = true;
 		navMesh.SetDestination(transform.position);
-        PlayerLookAt();
         Idle();
 
         if(attackTime.x < 0){

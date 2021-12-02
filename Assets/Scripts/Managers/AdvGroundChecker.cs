@@ -99,6 +99,7 @@ public class AdvGroundChecker : MonoBehaviour {
 					cc.Move(recent_slope * (slide_acceleration / 2));
 					slide_acceleration -= Time.deltaTime * 2;
 				}else {
+					slide_audioSource.Stop();
 					slide_acceleration = 0;
 				}
 			}
@@ -118,7 +119,8 @@ public class AdvGroundChecker : MonoBehaviour {
 			isWalkingOnLedge = false;
 		}
 
-		slide_audioSource.volume = Mathf.Clamp(slide_acceleration, 0, 0.4f);
+		
+		//slide_audioSource.volume = Mathf.Clamp(slide_acceleration, 0, 0.4f);
 		//slide_audioSource.pitch = slide_acceleration;
 		if(slide_acceleration < 0.1f) PlayerManager.Instance.current_slope = slope_angle; else PlayerManager.Instance.current_slope = cc.slopeLimit + 5;
 		
@@ -130,6 +132,8 @@ public class AdvGroundChecker : MonoBehaviour {
 		Vector3 slopeDirection = Vector3.up - hit.normal * Vector3.Dot(Vector3.up, hit.normal);
 		if(slide_speed <= 0) {
 			recent_slope = -slopeDirection;
+			slide_audioSource.Play();
+			slide_audioSource.time = Random.Range(0, slide_audioSource.clip.length);
 			recent_slope.x = 0;
 		}
 		ParticleSystemManager.PlayParticle(ParticleSystemManager.ParticleList.slideDust);

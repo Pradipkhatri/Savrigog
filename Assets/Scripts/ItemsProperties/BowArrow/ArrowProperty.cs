@@ -23,8 +23,7 @@ public class ParentArrowProperties{
     public float rayLength = 1f;
     public float sphereCast_Size = 0.28f;
     public AudioClip hitAudio;
-    public ParticleSystem brustParticle;
-    public ParticleSystem bloodParticle;
+    public string brust_particle_name;
     public GameObject arrowHole;
 }
 

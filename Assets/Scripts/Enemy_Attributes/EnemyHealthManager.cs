@@ -6,9 +6,9 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 
 	bool scorePass = true;
 
-	public bool no_hurtPlay = false;
+	public bool playHurt = true;
 	[SerializeField] bool knock_back_enabled = true;
-	[SerializeField] [Range(0, 1)] float play_hurt = 1;
+	//[SerializeField] [Range(0, 1)] float play_hurt = 1;
 	[SerializeField] GameObject playerAvoider;
 	[SerializeField] bool bowEnemy = false;
 
@@ -38,7 +38,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	[SerializeField] GameObject enemy_ui_canvas;
 	[SerializeField] Image healthFill, defenceFill;
 	[SerializeField] Image healthFollow;
-	[SerializeField] GameObject critical_condition_indicator;
+	//[SerializeField] GameObject critical_condition_indicator;
 
 	[Header("Blocking")]
 	[SerializeField] bool canBlock = false;
@@ -49,7 +49,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	
 	[Header("Extras")]
 	public bool isHurt;
-	public ParticleSystem bloodParticle;
+	public string bloodParticle_Tag = "RedBlood";
 	[SerializeField] ParticleSystem blockContactParticle;
 	public float knockBack = 5;
 	[HideInInspector] public Quaternion LookDirection;
@@ -60,8 +60,8 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	private Transform target;
 	private float Distance;
 
-	float recoverTime = 0f;
-	[SerializeField] float max_recoverTime = 0.1f;
+	//float recoverTime = 0f;
+	//[SerializeField] float max_recoverTime = 0.1f;
 
 	[SerializeField] string audio_onSword_Contact;
 
@@ -75,6 +75,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 		if(!bowEnemy) enemyAI = GetComponent<EnemyAIUpdate> ();
 		target = PlayerManager.Instance.player.transform;
 	}
+
 	void OnEnable () {
 		justSpwaned = true;
 		navMesh.enabled = false;
@@ -94,12 +95,12 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 		yield return new WaitForSeconds(1);
 		navMesh.enabled = true;
 
-		yield return new WaitForSeconds(2);
+		yield return new WaitForSeconds(0.5f);
+		justSpwaned = false;
 		if(enemy_ui_canvas != null) enemy_ui_canvas.SetActive(true);
 		if(healthFill != null) healthFill.fillAmount = 1;
 		if(defenceFill != null) defenceFill.fillAmount = 1;
 
-		justSpwaned = false;
 	}
 	
 	public void ArtificialUpdate(){
@@ -115,14 +116,15 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 			return;
 		}else{
 			isAlive = true;
+			/*
 			if(critical_condition_indicator != null){
 				if(currentHealth < (MaxHealth / 4)) critical_condition_indicator.SetActive(true); else critical_condition_indicator.SetActive(false);
 				critical_condition_indicator.GetComponent<Image>().color = new Color(1, 1, 1, Mathf.PingPong(Time.time * 2,1));
-			} 	
+			} 	*/
 		}
 		
 		Distance = Vector3.Distance (transform.position, target.position);
-		if(recoverTime > 0) recoverTime -= Time.deltaTime;
+		//if(recoverTime > 0) recoverTime -= Time.deltaTime;
 		
 		if(enemyAI != null && canBlock){
 			if (enemyAI.attackTime < 0 || Distance > enemyAI.maintain_Dis.z || enemyAI.isDisturbed) { 
@@ -139,8 +141,9 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	
 	public void TakeDamage(int DamageType, int Damage, bool SwordContact)
 	{
-		if(recoverTime > 0) return;
-		recoverTime = max_recoverTime;
+		if(justSpwaned) return;
+		//if(recoverTime > 0) return;
+		//recoverTime = max_recoverTime;
 		
 		if(knock_back_enabled) navMesh.velocity = -transform.forward * knockBack;
 		PlayArmor("Action");
@@ -188,14 +191,14 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 
 
 	private void PlayHurt(int DamageType){
-		bool play_anim = false;
-		if(DamageType <= 4) play_anim = Random.value < play_hurt; else play_anim = true;
-		if(play_anim){
+		//bool play_anim = false;
+		//if(DamageType <= 4) play_anim = Random.value < play_hurt; else play_anim = true;
+		//if(play_anim){
 			anim.SetFloat("HitType", DamageType);
 			//if (!anim.GetCurrentAnimatorStateInfo(0).IsTag("Hurt")) 
 			anim.SetTrigger("Hurt");
-			if(knock_back_enabled) navMesh.velocity = -transform.forward * knockBack;
-		}
+			//if(knock_back_enabled) navMesh.velocity = -transform.forward * knockBack;
+		//}
 	}
 	private void NotBlockingState(int Damage, int DamageType, bool SwordContact){
 		isHurt = true;
@@ -217,11 +220,13 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 			currentHealth -= Damage + Additional;
 		}
 		
-		if(!no_hurtPlay) PlayHurt(DamageType);
+		if(playHurt) PlayHurt(DamageType);
+
+
 
 		if(healthFill != null) healthFill.fillAmount = currentHealth / MaxHealth;
 		if(defenceFill != null) defenceFill.fillAmount = defenceLevel / maxDefenceLevel;
-		if(bloodParticle && SwordContact) bloodParticle.Play (true);
+
 		AudioCaller.MultiGroupAudioPlay(PlayerManager.Instance.swordAudios, enemy_audioSource, PlayerManager.Instance.current_weapon_type, audio_onSword_Contact);
 		FilterBar();
 
@@ -244,7 +249,7 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 	
 	void Smashed(int damageRate){
 		if(Distance < (PlayerManager.Instance.damageType - 2)){
-			navMesh.velocity = -transform.forward * 10;
+			navMesh.velocity = -transform.forward * knockBack;
 			PlayArmor("Action");
 			TakeDamage(PlayerManager.Instance.damageType, damageRate, false);
 		}
@@ -268,16 +273,19 @@ public class EnemyHealthManager : MonoBehaviour, IDamageable {
 
 				bool spwanObject = Random.value > 0.8f;
 				
-				if(spwanObject) Instantiate(GameManager.gameManager.enemy_itemSpwans[Random.Range(0, GameManager.gameManager.enemy_itemSpwans.Count)] ,transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
+				//if(spwanObject) Instantiate(GameManager.gameManager.enemy_itemSpwans[Random.Range(0, GameManager.gameManager.enemy_itemSpwans.Count)] ,transform.position + new Vector3(0, 0.5f, 0), Quaternion.identity);
 				PlayerManager.Instance.scoreStore += 1.3f;
-				transform.SetParent(null);
+				
 				scorePass = false;
+				transform.SetParent(null);
 		}
-		
+		transform.SetParent(null);
 		Invoke("ResetEnemy", 3);
 	}
 
 	void ResetEnemy(){
+		StopAllCoroutines();
+		transform.SetParent(null);
 		this.gameObject.SetActive(false);
 	}
 

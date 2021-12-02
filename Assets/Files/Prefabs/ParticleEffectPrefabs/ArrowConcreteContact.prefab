@@ -4767,9 +4767,9 @@ GameObject:
   - component: {fileID: 2931071598478056013}
   - component: {fileID: 2931071598478056014}
   - component: {fileID: 2931071598478056015}
-  - component: {fileID: 114363564553364458}
+  - component: {fileID: 114911720247051770}
   m_Layer: 0
-  m_Name: ArrowBrust_Concrete
+  m_Name: ArrowConcreteContact
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9533,7 +9533,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &114363564553364458
+--- !u!114 &114911720247051770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9542,11 +9542,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2931071598478056008}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Script: {fileID: 11500000, guid: cc0e3a9599a2f3a458adbf3c49992c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TimeOut: 0.5
-  m_DetachChildren: 0
+  timer: 0.3
 --- !u!1 &7385033166685874358
 GameObject:
   m_ObjectHideFlags: 0

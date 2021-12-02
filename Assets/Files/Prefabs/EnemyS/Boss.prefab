@@ -1093,9 +1093,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17aa2c20d8e9449983fe9c35cdaa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  no_hurtPlay: 0
+  playHurt: 1
   knock_back_enabled: 1
-  play_hurt: 1
   playerAvoider: {fileID: 0}
   bowEnemy: 0
   anim: {fileID: 4562900301937383501}
@@ -1119,14 +1118,14 @@ MonoBehaviour:
     blockPriority: 0.4
   isAlive: 1
   isHurt: 0
-  bloodParticle: {fileID: 5743882100029095749}
+  bloodParticle_Tag: RedBlood
   blockContactParticle: {fileID: 4562900301949935301}
   knockBack: 3
   LookDirection: {x: 0, y: 0, z: 0, w: 0}
   enemy_audioSource: {fileID: 0}
   armor_type: 
-  max_recoverTime: 0.1
   audio_onSword_Contact: Flesh
+  justSpwaned: 0
 --- !u!82 &4562900301936109379
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1136,11 +1135,11 @@ AudioSource:
   m_GameObject: {fileID: 4562900301930234879}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 243643030202717110, guid: e738035612ede1c408637cd9bcf46987,
+  OutputAudioMixerGroup: {fileID: 24300002, guid: e738035612ede1c408637cd9bcf46987,
     type: 2}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -1149,9 +1148,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 300
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -1159,23 +1158,59 @@ AudioSource:
     serializedVersion: 2
     m_Curve:
     - serializedVersion: 3
-      time: 0
+      time: 0.02
       value: 1
-      inSlope: 0
-      outSlope: 0
+      inSlope: -50.01992
+      outSlope: -50.01992
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.04
+      value: 0.5
+      inSlope: -12.50498
+      outSlope: -12.50498
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.08
+      value: 0.25
+      inSlope: -3.126245
+      outSlope: -3.126245
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.16
+      value: 0.125
+      inSlope: -0.78156126
+      outSlope: -0.78156126
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.32
+      value: 0.0625
+      inSlope: -0.19539031
+      outSlope: -0.19539031
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
     - serializedVersion: 3
       time: 1
       value: 0
-      inSlope: 0
-      outSlope: 0
+      inSlope: -0.020007975
+      outSlope: -0.020007975
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
+      inWeight: 0
+      outWeight: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
@@ -1199,7 +1234,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -18377,12 +18412,6 @@ PrefabInstance:
 --- !u!4 &6447923987890964427 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9047092455509746920, guid: ebf832a7132b97a43b6bfccf7b9734f3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2663344901901542179}
-  m_PrefabAsset: {fileID: 0}
---- !u!198 &5743882100029095749 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7728252026458807398, guid: ebf832a7132b97a43b6bfccf7b9734f3,
     type: 3}
   m_PrefabInstance: {fileID: 2663344901901542179}
   m_PrefabAsset: {fileID: 0}

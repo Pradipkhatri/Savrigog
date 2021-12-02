@@ -84,9 +84,13 @@ public class ParentArrow : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, parent_arrow_properties.rayLength, parent_arrow_properties.collisionLayers)){
             if(!collided) {
-                GameObject bulletHole = Instantiate(parent_arrow_properties.arrowHole, hit.point - (transform.forward * 0.01f), Quaternion.LookRotation(-hit.normal));
-                bulletHole.transform.SetParent(hit.transform);
-                ParticleSystem brustPar = Instantiate(parent_arrow_properties.brustParticle, hit.point, Quaternion.LookRotation(-transform.forward));
+                //GameObject bulletHole = Instantiate(parent_arrow_properties.arrowHole, hit.point - (transform.forward * 0.01f), Quaternion.LookRotation(-hit.normal));
+                //bulletHole.transform.SetParent(hit.transform);
+                //ParticleSystem brustPar = Instantiate(parent_arrow_properties.brustParticle, hit.point, Quaternion.LookRotation(-transform.forward));
+                
+                GameObject brustPar = SpwanManager.Instance.SpwanFromPool(parent_arrow_properties.brust_particle_name, hit.point, Quaternion.LookRotation(-transform.forward), true);
+			    brustPar.GetComponent<ParticleSystem>().Play();
+
                 transform.SetParent(hit.transform);
             }
             transform.position = hit.point;
@@ -102,14 +106,14 @@ public class ParentArrow : MonoBehaviour
         IDamageable damageable = hit.transform.GetComponent<IDamageable>();
         if(damageable == null) return;
         damageable.TakeDamage (2 , Mathf.CeilToInt(calculated_damage), false);
-        ParticleSystem brustPar = Instantiate(parent_arrow_properties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));
+        //ParticleSystem brustPar = Instantiate(parent_arrow_properties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));
         collided = true;
     }
 
     private void FilterHitHead(RaycastHit hit){
         EnemyHeadShot enemyHeadShot = hit.transform.GetComponent<EnemyHeadShot>();
         enemyHeadShot.TakenDamage(Mathf.CeilToInt(calculated_damage));
-        ParticleSystem brustPar = Instantiate(parent_arrow_properties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));
+        //ParticleSystem brustPar = Instantiate(parent_arrow_properties.bloodParticle, hit.point, Quaternion.LookRotation(-transform.forward));
         collided = true;
     }
 

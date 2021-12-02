@@ -59,9 +59,6 @@ public class PlayerManager : MonoBehaviour {
 
 	[SerializeField] ShieldProperty current_Shield_Property;
 
-
-	bool enableGUI = false;
-
 	
 	[HideInInspector] public float current_slope;
 	[HideInInspector] public int RHS_weapon_Level = 1;
@@ -93,6 +90,7 @@ public class PlayerManager : MonoBehaviour {
 	[HideInInspector] public LadderClimbing ladderClimbing;
 	[HideInInspector] public ClimbingWall climbingWall;
 	[HideInInspector] public AdvGroundChecker adv_groundChecker;
+	ObjectPushMech obm;
 
 
 	public delegate void OnGroundSmash(int damageRate);
@@ -105,13 +103,13 @@ public class PlayerManager : MonoBehaviour {
 		climbingWall = GetComponent<ClimbingWall>();
 		playerAttack = GetComponent<PlayerAttack>();
 		adv_groundChecker = GetComponent<AdvGroundChecker>();
+		obm = GetComponent<ObjectPushMech>();
 		anim = GetComponent<Animator>();
 		mainCamera = Camera.main.transform;
 	}
 
 	void Start(){
 		gameManager = GameManager.gameManager;
-
 	}
 
 	public void Smashed(){
@@ -130,18 +128,24 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	void Update(){
-		if(isDead || gameManager.isPaused){
-			cc.Move(Vector3.up * cm.velocityY);
+		if(isDead || gameManager.isPaused || PlayerActions.Busy){
+			//cc.Move(Vector3.up * cm.velocityY);
 			return;
 		}
 		if(cm) cm.ArtificialUpdate();
 		if(playerAttack) playerAttack.ArtificialUpdate();
-	}
 
-    //[System.Obsolete]
+		/*
+		if(Input.GetKeyDown(KeyCode.Y)){
+			if(enableGUI)
+				enableGUI = false;
+			else
+				enableGUI = true;
+		}*/
+	}
     void FixedUpdate(){		
-			if(isDead || gameManager.isPaused) {
-				cc.Move(Vector3.up * cm.velocityY);
+			if(isDead || gameManager.isPaused || PlayerActions.Busy) {
+				//cc.Move(Vector3.up * cm.velocityY);
 				return;
 			}
 			RootMotionHandler();
@@ -150,31 +154,17 @@ public class PlayerManager : MonoBehaviour {
 
 			if(cm) cm.ArtificialFixedUpdate();
 			if(ladderClimbing) ladderClimbing.ArtificialUpdate();
-			if(climbingWall) climbingWall.ArtificialUpdate();
-			
+			if(climbingWall) climbingWall.ArtificialUpdate();	
 			if(adv_groundChecker) adv_groundChecker.ArtificialUpdate();
 
 			if(PlayerActions.objectPushing){
 				gameManager.cams[2].priority = 15;
-				ObjectPushMech obm = GetComponent<ObjectPushMech>();
 				obm.GrabControl();
 			}else{
 				gameManager.cams[2].priority = 5;
 			}
-
-			if(Input.GetKeyDown(KeyCode.Y)){
-				if(enableGUI)
-					enableGUI = false;
-				else
-					enableGUI = true;
-			}
-
-			if (anim.GetCurrentAnimatorStateInfo(0).IsTag("Busy") || anim.GetNextAnimatorStateInfo(0).IsTag("Busy"))
-				PlayerActions.Busy = true;
-			else
-				PlayerActions.Busy = false;
-			
-			if(PlayerActions.Busy) anim.SetFloat ("MovementSpeed", 0, 0.1f, Time.deltaTime);
+		
+						
 			float currentWeight = anim.GetLayerWeight(1);
 			if (PlayerActions.isGrounded && PlayerActions.NotPerforming() && currentStamina > 10 && !PlayerActions.isAttacking && !PlayerActions.WalkActions())
 			{
@@ -216,7 +206,7 @@ public class PlayerManager : MonoBehaviour {
 	}
 	public void TakeDamage(float Damage, int damageType, Transform target){
 		if(isDead || PlayerActions.isDouging) return;
-		anim.SetFloat("HurtType", 0);
+		anim.SetFloat("HurtType", damageType);
 		gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one * 3);
 
 
@@ -276,8 +266,8 @@ public class PlayerManager : MonoBehaviour {
 	}
 
 	private void Death(){
-
 		if(!isDead){
+			anim.SetLayerWeight(anim.GetLayerIndex("ShootingArrow"), 0);
 			AudioCaller.SingleGroupAudioPlay(playerAudios, null ,"Die");
 			anim.SetBool("Dead", true);
 			isDead = true;
@@ -289,7 +279,7 @@ public class PlayerManager : MonoBehaviour {
 		PlayArmor("Action");
 		ParticleSystemManager.PlayParticle(ParticleSystemManager.ParticleList.groundDustParticle);
 	}
-
+	/*
 	private void OnGUI(){
 
 		if(enableGUI == true){	
@@ -309,17 +299,23 @@ public class PlayerManager : MonoBehaviour {
 			GUI.Box (new Rect (refField.x, refField.y + 375, refField.width, refField.height), "Sliding:" + PlayerActions.sliding);
 		}
 	}
-
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.magenta;
 		Gizmos.DrawWireCube(transform.position + new Vector3(0, enemyChecker_Pos_Size.z, 0), new Vector3(enemyChecker_Pos_Size.x, enemyChecker_Pos_Size.y, enemyChecker_Pos_Size.x));
 	}
+	*/
 	
 	private void RootMotionHandler(){
 		if(PlayerActions.RootMotionHandler()){
 			anim.applyRootMotion = true;
 		}else anim.applyRootMotion = false;
+	}
+
+	void OnTriggerEnter(Collider other){
+		ITrigger trigger = other.GetComponent<ITrigger>();
+		if(trigger == null) return;
+		trigger.TriggerEnter();
 	}
 
 	public void PlayArmor(string code){

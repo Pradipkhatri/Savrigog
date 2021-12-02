@@ -9523,7 +9523,7 @@ GameObject:
   - component: {fileID: 6155105785483623583}
   - component: {fileID: 6321739303880497257}
   - component: {fileID: 6322881688281242661}
-  - component: {fileID: 8911349971413141337}
+  - component: {fileID: 114372751850305862}
   m_Layer: 10
   m_Name: WoodContact
   m_TagString: Untagged
@@ -14201,7 +14201,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &8911349971413141337
+--- !u!114 &114372751850305862
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14210,11 +14210,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 6159914136329864571}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 37fac21d1f093d344816942d1abce94e, type: 3}
+  m_Script: {fileID: 11500000, guid: cc0e3a9599a2f3a458adbf3c49992c61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_TimeOut: 1
-  m_DetachChildren: 0
+  timer: 0.3
 --- !u!1 &7202808387141321295
 GameObject:
   m_ObjectHideFlags: 0

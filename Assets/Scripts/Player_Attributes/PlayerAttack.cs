@@ -37,12 +37,14 @@ public class PlayerAttack : MonoBehaviour {
 	public float current_targetAngle;
 
 	AudioSource secoandary_audioSource;
+	PlayerManager playerManager;
 
 	bool at_tracker = false;
 	bool weaponChanged = false;
 
 	void Start() {
-		anim = PlayerManager.Instance.anim;
+		playerManager = PlayerManager.Instance;
+		anim = playerManager.anim;
 		secoandary_audioSource = GameManager.gameManager.secoandary_audioSource;
 		selected_swordID = -1;
 		WeaponSelectionManager();
@@ -61,8 +63,8 @@ public class PlayerAttack : MonoBehaviour {
 		idleSword = rightHandedWeapons [selected_swordID].idleSword;
 		handSword = rightHandedWeapons [selected_swordID].handSword;
 		current_swordProperties = handSword.GetComponent<WeaponProperties> ();
-		PlayerManager.Instance.current_weapon_type = current_swordProperties.meleeWeapon.weapon_type;
-		PlayerManager.Instance.RHS_weapon_Level = current_swordProperties.weaponLevel;
+		playerManager.current_weapon_type = current_swordProperties.meleeWeapon.weapon_type;
+		playerManager.RHS_weapon_Level = current_swordProperties.weaponLevel;
 		if(current_swordProperties != null) swordTrail = current_swordProperties.meleeWeapon.sword_trail;
 
 		weaponChanged = true;
@@ -102,7 +104,7 @@ public class PlayerAttack : MonoBehaviour {
 	}
 
 	private void EnemyTarget(){
-		Transform current_enemy = PlayerManager.Instance.current_enemy;
+		Transform current_enemy = playerManager.current_enemy;
 		if(current_enemy == null) return;
 
 		EnemyHealthManager ehm = current_enemy.GetComponent<EnemyHealthManager>();
@@ -118,20 +120,20 @@ public class PlayerAttack : MonoBehaviour {
 	
 	public void ArtificialUpdate(){
 
-		if (PlayerManager.Instance.isBlocking || PlayerActions.isAiming) return;
+		if (playerManager.isBlocking || PlayerActions.isAiming) return;
 
-		PlayerManager.Instance.damageEnabled = damageEnabled;
+		playerManager.damageEnabled = damageEnabled;
 
 		
 		if (Input.GetButtonDown ("Fire1")) {
-			if(PlayerManager.Instance.currentStamina > 10){
+			if(playerManager.currentStamina > 10){
 				attackTimer = maxattackTimer;
 				anim.SetBool ("Attack", true);
 				anim.SetBool ("HeavyAttack", false);
 			}else
 				AudioCaller.SingleGroupAudioPlay(null, secoandary_audioSource, "NoStamina");
 		} else if (Input.GetButtonDown ("Fire2")) {
-				if(PlayerManager.Instance.currentStamina > 10){
+				if(playerManager.currentStamina > 10){
 				attackTimer = maxattackTimer;
 				anim.SetBool ("HeavyAttack", true);
 				anim.SetBool ("Attack", false);
@@ -169,19 +171,20 @@ public class PlayerAttack : MonoBehaviour {
 
 	void GroundSmash(int range){
 		if(!damageEnabled) damageEnabled = true;
-		PlayerManager.Instance.currentStamina -= 10 * PlayerManager.Instance.damageType;
-		PlayerManager.Instance.stamina_hold_period = 1.3f;
-		PlayerManager.Instance.PlayArmor("Action");
+		GameManager.gameManager.impulseSource.GenerateImpulseAt(transform.position, Vector3.one * 4);
+		playerManager.currentStamina -= 10 * playerManager.damageType;
+		playerManager.stamina_hold_period = 1.3f;
+		playerManager.PlayArmor("Action");
 		ParticleSystemManager.PlayParticle(ParticleSystemManager.ParticleList.groundSmash);
 		AudioCaller.SingleGroupAudioPlay(null, null, "GroundSmash");
-		PlayerManager.Instance.Smashed();
+		playerManager.Smashed();
 
 	}
 
 	void DamagePoint() {
 		if(!damageEnabled) damageEnabled = true;
-		PlayerManager.Instance.currentStamina -= 10 * PlayerManager.Instance.damageType;
-		PlayerManager.Instance.stamina_hold_period = 1.3f;
+		playerManager.currentStamina -= 10 * playerManager.damageType;
+		playerManager.stamina_hold_period = 1.3f;
 		
 	}
 	
@@ -202,19 +205,21 @@ public class PlayerAttack : MonoBehaviour {
 	
 		yield return new WaitForSeconds(timer);
 		Color c = new Color(0, 0, 0);
-		while(sm.GetColor("_EmissionColor") != c && sm != null){
-			Color newColor = Color.Lerp (sm.GetColor("_EmissionColor"), c, 2 * Time.deltaTime);
-			sm.SetColor ("_EmissionColor", newColor);
-			yield return null;
+		if(sm != null){
+			while(sm.GetColor("_EmissionColor") != c){
+				Color newColor = Color.Lerp (sm.GetColor("_EmissionColor"), c, 2 * Time.deltaTime);
+				sm.SetColor ("_EmissionColor", newColor);
+				yield return null;
+			}
 		}
 	}
 
 	void TrailStart(){
-		PlayerManager.Instance.PlayArmor("FootSteps");
+		playerManager.PlayArmor("FootSteps");
 		current_swordProperties.meleeWeapon.ResetSwordStuck();
-		AudioCaller.MultiGroupAudioPlay(PlayerManager.Instance.swordAudios, secoandary_audioSource, "Swoosh", current_swordProperties.meleeWeapon.swooshAudio);
-		int swordPower = Mathf.RoundToInt( current_swordProperties.meleeWeapon.sword_power_curve.Evaluate (PlayerManager.Instance.damageType));
-		PlayerManager.Instance.currentDamageRate = swordPower;
+		AudioCaller.MultiGroupAudioPlay(playerManager.swordAudios, secoandary_audioSource, "Swoosh", current_swordProperties.meleeWeapon.swooshAudio);
+		int swordPower = Mathf.RoundToInt( current_swordProperties.meleeWeapon.sword_power_curve.Evaluate (playerManager.damageType));
+		playerManager.currentDamageRate = swordPower;
 		if(swordTrail != null) swordTrail.SetActive (true);
 		damageEnabled = true;
 	}

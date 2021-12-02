@@ -109,10 +109,7 @@ MonoBehaviour:
     rayLength: 0.6
     sphereCast_Size: 0.2
     hitAudio: {fileID: 8300000, guid: 093377f536adbf347b2504e0d416ca63, type: 3}
-    brustParticle: {fileID: 3013595132011136016, guid: 4b87b2f4e77f1e4419361a8b89d4d593,
-      type: 3}
-    bloodParticle: {fileID: 7728252026458807398, guid: 17423e0344a40bc4f9e981f2f8b3bc9a,
-      type: 3}
+    brust_particle_name: ArrowContact
     arrowHole: {fileID: 4432194638293584020, guid: 6c445dc8c9b239646950ef4460315c10,
       type: 3}
   destroyTime: 3

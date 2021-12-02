@@ -73,6 +73,6 @@ public static class AudioCaller
     }
 
     public static void PlaySound(AudioSource audioSource, AudioClip audio){
-        audioSource.PlayOneShot(audio);
+        if(audioSource.gameObject.activeInHierarchy) audioSource.PlayOneShot(audio);
     }
 }

@@ -8,7 +8,6 @@ public class CharacterFly : MonoBehaviour
     bool isflying = false;
     CharacterMovement cm;
     CharacterController cc;
-
     [SerializeField] float moveSpeed = 10;
 
     void Start(){
@@ -30,11 +29,10 @@ public class CharacterFly : MonoBehaviour
             }
         }
 
-        if(isflying) Flying();
+        if(isflying) Flying(); 
     }
 
     void Flying(){
-       
         cc.enabled = false;
         cm.airTime = 0;
         float speed = 0;

@@ -20,7 +20,7 @@ public class Lever : MonoBehaviour {
 	[Header("Lever Prop")]
 	[Space(10)]
 	[SerializeField] Animation triggerAnimation;
-	[SerializeField] Transform triggerPos;
+	//[SerializeField] Transform triggerPos;
 	[SerializeField] AudioClip triggeredAudio;
 	void Start () {
 		anim = PlayerManager.Instance.anim;
@@ -46,9 +46,8 @@ public class Lever : MonoBehaviour {
 				selfAnimation.Play();
 				if(interactionPoint != null)
 				{
-					other.gameObject.transform.position = interactionPoint.position;
-					other.gameObject.transform.rotation = interactionPoint.rotation;
-					//StartCoroutine(Adjustments(other.gameObject, interactionPoint));
+					
+					StartCoroutine(Adjustments(other.gameObject.transform, interactionPoint));
 				}
 				if (hasPlayerAnimation)
 				{	anim.SetTrigger("Interact");
@@ -62,15 +61,17 @@ public class Lever : MonoBehaviour {
 		}
 	}
 
-	private IEnumerator Adjustments(GameObject playerObj, Transform interactionPoint)
+	private IEnumerator Adjustments(Transform playerObj, Transform interactionPoint)
 	{
 		float taskTime_new = taskTime;
 		while (taskTime_new > 0)
 		{
-			playerObj.transform.position = Vector3.SmoothDamp(playerObj.transform.position, interactionPoint.position, ref velocity, placement_Smoothing * Time.deltaTime);
-			playerObj.transform.rotation = interactionPoint.rotation;
+			playerObj.position = Vector3.SmoothDamp(playerObj.position, interactionPoint.position, ref velocity, placement_Smoothing * Time.deltaTime);
+			playerObj.rotation = interactionPoint.rotation;
 			taskTime_new -= Time.deltaTime;
 			yield return null;
 		}
+		playerObj.position = interactionPoint.position;
+		playerObj.rotation = interactionPoint.rotation;
 	}
 }

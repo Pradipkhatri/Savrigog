@@ -2168,7 +2168,7 @@ AudioSource:
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 125
+  Priority: 128
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 50
@@ -2314,9 +2314,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc17aa2c20d8e9449983fe9c35cdaa47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  no_hurtPlay: 0
-  knock_back_enabled: 0
-  play_hurt: 0.2
+  playHurt: 0
+  knock_back_enabled: 1
   playerAvoider: {fileID: 1445935500}
   bowEnemy: 0
   anim: {fileID: 7527626511623515550}
@@ -2340,14 +2339,12 @@ MonoBehaviour:
     blockPriority: 0
   isAlive: 1
   isHurt: 0
-  bloodParticle: {fileID: 198498222226652426, guid: 8f34836f9742e5b4b810de87a0e58724,
-    type: 3}
+  bloodParticle_Tag: ConcreteContact
   blockContactParticle: {fileID: 0}
-  knockBack: 3
+  knockBack: 2
   LookDirection: {x: 0, y: 0, z: 0, w: 0}
   enemy_audioSource: {fileID: 7527626511623515539}
   armor_type: 
-  max_recoverTime: 0.1
   audio_onSword_Contact: Concrete
   justSpwaned: 0
 --- !u!114 &7527626511623515537

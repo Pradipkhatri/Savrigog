@@ -67,6 +67,11 @@ public class CharacterMovement : MonoBehaviour {
 	}
 
 	public void ArtificialUpdate(){
+		
+		if(Input.GetKey(KeyCode.V)){
+			transform.position = Vector3.Lerp(transform.position, transform.forward, 2 * Time.deltaTime);
+		}
+
 		if(PlayerActions.isGrounded && PlayerActions.NotPerforming())
 		{
 			if(!PlayerActions.Hurted()){
@@ -99,12 +104,6 @@ public class CharacterMovement : MonoBehaviour {
 		if(flying) return;
 
 		if(PlayerManager.Instance.isDead || GameManager.gameManager.isPaused) return;
-
-
-		if(Input.GetKey(KeyCode.V)){
-			transform.position = Vector3.Lerp(transform.position, transform.forward, 2 * Time.deltaTime);
-		}
-
 		
 
 		if (PlayerManager.Instance.currentStamina > 50)
@@ -165,7 +164,9 @@ public class CharacterMovement : MonoBehaviour {
 						
 		Dir = (forward * moveInput.y + right * moveInput.x).normalized;
 		magnitude = Mathf.Clamp01 (moveInput.magnitude);
-		if(PlayerActions.NotPerforming() && !PlayerActions.Hurted()) MovementAvailable(); //else OtherAction();
+		if(PlayerActions.NotPerforming() && !PlayerActions.Hurted()) MovementAvailable(); else OtherAction();
+		
+		Debug.Log(PlayerActions.Busy);
 	}
 
 	private void OtherAction(){
@@ -174,7 +175,7 @@ public class CharacterMovement : MonoBehaviour {
 
 	private void MovementAvailable(){
 
-		if(PlayerActions.EdgeSlip()){
+		if(PlayerActions.EdgeSlip() && !PlayerActions.Busy){
 			addedVelocity = Vector3.Lerp(addedVelocity, Vector3.zero, 4 * Time.deltaTime);
 			Vector3 additionalForce = addedVelocity;
 			controller.Move (additionalForce * Time.deltaTime);

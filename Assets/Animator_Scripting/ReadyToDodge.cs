@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class ReadyToDodge : StateMachineBehaviour {
 
+	PlayerManager pm;
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+		if(pm == null) pm = PlayerManager.Instance;
 		PlayerActions.isDouging = true;
-		PlayerManager.Instance.currentStamina -= 10;
-		PlayerManager.Instance.stamina_hold_period = 2;
+		pm.currentStamina -= 10;
+		pm.stamina_hold_period = 2;
 	}
 
 	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -16,10 +18,8 @@ public class ReadyToDodge : StateMachineBehaviour {
 
 	override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 		PlayerActions.isDouging = false;
-		CharacterMovement cm;
-		cm = GameObject.FindGameObjectWithTag ("Player").GetComponent<CharacterMovement> ();
-		PlayerManager.Instance.cc.height = cm.colliderHeight;
-		PlayerManager.Instance.cc.center = cm.colliderCenter;
+		pm.cc.height = pm.cm.colliderHeight;
+		pm.cc.center = pm.cm.colliderCenter;
 	}
 
 	// OnStateMove is called right after Animator.OnAnimatorMove(). Code that processes and affects root motion should be implemented here

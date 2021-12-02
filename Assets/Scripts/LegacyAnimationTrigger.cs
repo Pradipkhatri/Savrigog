@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class LegacyAnimationTrigger : MonoBehaviour
+public class LegacyAnimationTrigger : MonoBehaviour, ITrigger
 {
     [SerializeField] private bool destroy_after_done;
     [SerializeField] private Animation anim;
@@ -19,13 +19,7 @@ public class LegacyAnimationTrigger : MonoBehaviour
 
     [SerializeField] private Transform audio_spwan_Location;
 
-    private void OnTriggerEnter(Collider other){
-        if(other.gameObject.tag == "Player"){
-            PlayerEntered();
-        }
-    }
-
-    void PlayerEntered(){
+    public void TriggerEnter(){
         anim.Play(anim_name);
         anim[anim_name].speed = anim_speed;
         

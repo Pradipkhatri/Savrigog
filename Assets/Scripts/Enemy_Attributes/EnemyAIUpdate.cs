@@ -88,10 +88,10 @@ public class EnemyAIUpdate : MonoBehaviour {
 
 		if(anim.GetCurrentAnimatorStateInfo(0).IsTag("Attack")){
 			striking = true;
-			enemyManager.no_hurtPlay = true;
+			//enemyManager.playHurt = true;
 		}else{
 			striking = false;
-			enemyManager.no_hurtPlay = false;
+			//enemyManager.playHurt = false;
 		}
 
 		if (striking || enemyManager.isHurt){

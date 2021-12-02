@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fad37e9025bcb842aca7429a7704a64, type: 3}
+  m_Name: BloodSplats
+  m_EditorClassIdentifier: 
+  textures:
+  - {fileID: 2800000, guid: 72dbae30e5e84ba4c8e3c30b8d5b978e, type: 3}
+  - {fileID: 2800000, guid: 4a79483994d1c1140aa425d6af6c1b2d, type: 3}
+  - {fileID: 2800000, guid: da0072336b126a446a4944f84ca1ce4b, type: 3}

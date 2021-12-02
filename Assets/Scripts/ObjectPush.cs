@@ -3,84 +3,69 @@ using System.Collections;
 
 public class ObjectPush : MonoBehaviour {
 
-	[SerializeField] GUISkin GUIskin;
+	//[SerializeField] GUISkin GUIskin;
 
-	GameObject pushAbleObject;
+	Transform pushAbleObject;
 	[SerializeField] Transform wallCheckers;
 	Transform player;
-	Vector3 velocity;
-
-	bool guiTriggerer = false;
-
 	bool isGrabbing;
 
-	void Start(){
-		pushAbleObject = transform.parent.gameObject;
-	}
+	bool process;
 
-	void OnTriggerExit(Collider other){
-		if(other.gameObject.tag == "Player")
-			guiTriggerer = false;
+	void Start(){
+		pushAbleObject = transform.parent.gameObject.transform;
+		player = PlayerManager.Instance.player.transform;
 	}
 
 	void OnTriggerStay (Collider other) {
-
+		if(process) return;
 		if(other.gameObject.tag == "Player"){
-
-			if(isGrabbing){
-				guiTriggerer = false;
-				pushAbleObject.transform.parent = player;
-				if(PlayerActions.Hurted() || PlayerActions.Busy){
-					GrabFalse();
-				}
-			}else{
-				guiTriggerer = true;
-				pushAbleObject.transform.parent = null;
-			}
-
 			if(Input.GetButtonDown("Grab") ){
-				if(!isGrabbing){
-					if(PlayerActions.NotPerforming()){
-						player = other.gameObject.transform;
-						StartCoroutine(OnGrab(0.2f));
-						wallCheckers.rotation = player.rotation;
-						other.GetComponent<Animator>().SetBool("PushPosition", true);
-						PlayerActions.objectPushing = true;
-					}else return;
-				}else{
+				if(isGrabbing){
 					GrabFalse();
+					process = true;
+				}else{
+					if(!PlayerActions.NotPerforming()) return;
+					StartCoroutine(GrabTrue());
+					process = true;
 				}
+				StartCoroutine(ProcessHandler());
 			}
 		}
 	}
 
-	IEnumerator OnGrab(float timer){
+	IEnumerator ProcessHandler(){
+		float t = 0.1f;
+		while(t > 0){
+			t -= Time.deltaTime;
+			yield return null;
+		}
+		process = false;
+	}
+
+	IEnumerator GrabTrue(){
+		player.GetComponent<Animator>().SetBool("PushPosition", true);
+		PlayerActions.objectPushing = true;
+
+		float timer = 0.2f;
 		while(timer > 0){
-			player.position = Vector3.SmoothDamp(player.position, transform.position, ref velocity, 3 * Time.deltaTime);
+			player.position = Vector3.Lerp(player.position, transform.position, 4 * Time.deltaTime);
 			player.rotation = transform.rotation;
 			timer -= Time.deltaTime;
 			yield return null;
 		}
-		ParentSite();
+		player.position = transform.position;
+		player.rotation = transform.rotation;
+		pushAbleObject.SetParent(player.transform);
+		wallCheckers.rotation = transform.rotation;
+		isGrabbing = true;
 	}
 
 	void GrabFalse(){
-		pushAbleObject.transform.parent = null;
-		isGrabbing = false;
+		pushAbleObject.SetParent(null);
 		PlayerActions.objectPushing = false; 
 		player.GetComponent<Animator>().SetBool("PushPosition", false);
-		
-	}
-
-	void ParentSite(){
-		isGrabbing = true;
-		pushAbleObject.transform.parent = player.transform;
-	}
-
-	void OnGUI(){
-		GUI.skin = GUIskin;
-		if(guiTriggerer)
-			GUI.Box(new Rect(Screen.width/2, Screen.height - 70, 40, 40), "O");
+		isGrabbing = false;
 	}
 
 }
